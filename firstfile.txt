@@ -1,0 +1,39 @@
+
+// Question 1
+// number of days each movie is rented
+var littleMermaidDays = 3;
+var brotherBearDays = 5;
+var herculesDays = 1;
+
+// price per day for renting a movie
+var pricePerDay = 3;
+
+// total payment for all movies
+var totalPayment = pricePerDay * (littleMermaidDays + brotherBearDays + herculesDays)
+
+// output Total payment: $27
+console.log("Total payment: $" + totalPayment);
+
+// Question 2
+// hourly rate from each company
+var google = 400 ;
+var amazon = 380 ;
+var facebook = 350 ;
+
+// hours from each company
+var hoursForGoogle = 6 ;
+var hoursForAmazon = 4 ;
+var hoursForFacebook = 10 ;
+
+// payment from each company
+var googlePayment = google * hoursForGoogle ;
+var amazonPayment = amazon * hoursForAmazon ;
+var facebookPayment = facebook * hoursForFacebook ;
+
+// total weekly payment
+var totalPayment = googlePayment + amazonPayment + facebookPayment;
+
+// print result
+console.log("Total payment for the week : $" + totalPayment);
+
+// Question 3
