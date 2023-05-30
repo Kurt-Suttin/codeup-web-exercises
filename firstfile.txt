@@ -37,3 +37,26 @@ var totalPayment = googlePayment + amazonPayment + facebookPayment;
 console.log("Total payment for the week : $" + totalPayment);
 
 // Question 3
+// Define variables
+const isClassFull = false;
+const doesScheduleConflict = false;
+
+// Check enrollment conditions
+if (!isClassFull && !doesScheduleConflict) {
+  console.log("The student can enroll in the class.");
+} else {
+  console.log("The student cannot enroll in the class.");
+}
+
+// Question 4
+// Define variables
+const numberOfItems = 3;
+const offerExpired = false;
+const isPremiumMember = true;
+
+// Check offer eligibility
+if ((numberOfItems > 2 && !offerExpired) || isPremiumMember) {
+  console.log("The product offer can be applied.");
+} else {
+  console.log("The product offer cannot be applied.");
+}
