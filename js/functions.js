@@ -1,10 +1,17 @@
-// "use strict";
+"use strict";
 //
 // /**
 //  * TODO:
 //  * Create a function called 'sayHello' that takes a parameter 'name'.
 //  * When called, the function should return a message that says hello to the passed in name.
-//  *
+
+
+function sayHello(name) {
+    return `Hello ${name}!`;
+}
+console.log(sayHello("Kurt"));
+
+
 //  * Example
 //  * > sayHello("codeup") // returns "Hello, codeup!"
 //  */
@@ -13,7 +20,15 @@
 //  * TODO:
 //  * Call the function 'sayHello' and pass your name as a string literal argument.
 //  * Store the result of the function call in a variable named 'helloMessage'.
-//  *
+
+let myName = "Kurt";
+let helloMessage = sayHello(myName);
+console.log(helloMessage);
+function sayHello(name) {
+    return "Hello, " + name + "!";
+}
+
+
 //  * console.log 'helloMessage' to check your work
 //  */
 //
@@ -22,18 +37,33 @@
 //  * Store your name as a string in a variable named 'myName', and pass that
 //  * variable to the 'sayHello' function. You should see the same output in the
 //  * console.
-//  */
+// //  */
+
+
+console.log(sayHello(myName));
+
+
 //
 // // Don't modify the following line, it generates a random number between 1 and 3
 // // and stores it in a variable named random
-// var random = Math.floor((Math.random() * 3) + 1);
-//
+
+let random = Math.floor((Math.random() * 3) + 1);
+
+
+
+
 // /**
 //  * TODO:
 //  * Create a function called 'isTwo' that takes a number as a parameter.
 //  * The function should return a boolean value based on whether or not the passed
 //  * number is the number 2.
-//  *
+function isTwo(number){
+    return number === 2
+}
+console.log(isTwo(random));
+console.log(`The random number ${random} is equal to 2? ${isTwo(random)}`)
+
+
 //  * Example
 //  * > isTwo(1) // returns false
 //  * > isTwo(2) // returns true
@@ -51,21 +81,37 @@
 //  * Create a function named 'calculateTip' to calculate a tip on a bill at a
 //  * restaurant. The function should accept a tip percentage and the total of the
 //  * bill, and return the amount to tip
+function calculateTip(tipPercentage, totalBill) {
+    let tipAmount = (tipPercentage / 100) * totalBill;
+    return tipAmount;
+}
+
 //  *
 //  * Examples:
 //  * > calculateTip(0.20, 20) // returns 4
 //  * > calculateTip(0.25, 25.50) // returns 6.375
 //  * > calculateTip(0.15, 33.42) // returns 5.013
 //  */
-//
+
 // /**
 //  * TODO:
 //  * Use prompt and alert in combination with your calculateTip function to
 //  * prompt the user for the bill total and a percentage they would like to tip,
 //  * then display the dollar amount they should tip
 //  */
-//
-// /**
+function calculateTip(tipPercentage, totalBill) {
+    let tipAmount = (tipPercentage / 100) * totalBill;
+    return tipAmount;
+}
+
+let totalBill = parseFloat(prompt("Enter the total bill amount:"));
+let tipPercentage = parseFloat(prompt("Enter the tip percentage:"));
+
+let tipAmount = calculateTip(tipPercentage, totalBill);
+
+alert("You should tip $" + tipAmount.toFixed(2));
+
+
 //  * TODO:
 //  * Create a function named `applyDiscount`. This function should accept a price
 //  * (before a discount is applied), and a discount percentage (a number between 0
@@ -79,3 +125,8 @@
 //  *
 //  * > applyDiscount(45.99, 0.12) // 40.4712
 //  */
+function applyDiscount(price, discountPercentage) {
+    let discountAmount = price * discountPercentage;
+    let discountedPrice = price - discountAmount;
+    return discountedPrice;
+}
