@@ -9,42 +9,21 @@
 //  * color stated in the argument of the function. For colors you do not have
 //  * responses written for, return a string stating so
 
-    //     function analyzeColor(color){
-    //     if (color === 'red'){
-    //         return "stop signs are red"
-    //     }
-    //     else if (color === 'blue'){
-    //         return "the ocean is blue"
-    //     }
-    //     else if (color === 'yellow'){
-    //         return "the sun is yellow"
-    //     }
-    //     else if (color === 'green'){
-    //         return "healthy grass is green"
-    //     }
-    //     else if (color === 'purple'){
-    //         return "plums are purple"
-    //     }
-    //     else {
-    //         return "sorry I don't know that color"
-    //     }
-    // }
-    // analyzeColor()
-// function analyzeColor(colorName) {
-//     switch (colorName) {
-//         case 'red':
-//             return "stop signs are red";
-//         case 'blue':
-//             return "the ocean is blue";
-//         case 'yellow':
-//             return "the sun is yellow";
-//         case 'green':
-//             return "the sun is yellow";
-//         case 'purple':
-//             return "plums are purple";
-//         default :
-//             return "sorry I don't know that color";
-//     }}
+function analyzeColor(colorName) {
+    switch (colorName) {
+        case 'red':
+            return "stop signs are red";
+        case 'blue':
+            return "the ocean is blue";
+        case 'yellow':
+            return "the sun is yellow";
+        case 'green':
+            return "the sun is yellow";
+        case 'purple':
+            return "plums are purple";
+        default :
+            return "sorry I don't know that color";
+    }}
 // analyzeColor()
 // //  * Example:
 // //  *  > analyzeColor('blue') // returns "blue is the color of the sky"
@@ -71,6 +50,38 @@
 //  * Pass the `randomColor` variable to your 'analyzeColor' function and console.log the results.
 //  * You should see a different message every time you refresh the page
 //  */
+// function analyzeColor(colorName) {
+//     // function name
+//     let colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
+//     let randomColor = colors[Math.floor(Math.random() * colors.length)];
+//     // local variables for this function
+//     switch (randomColor) {
+//         case 'red':
+//             return "stop signs are red";
+//         case 'blue':
+//             return "the ocean is blue";
+//         case 'yellow':
+//             return "the sun is yellow";
+//         case 'green':
+//             return "the sun is yellow";
+//         case 'violet':
+//             return "plums are violet";
+//         case 'indigo':
+//             return "bluebirds are indigo";
+//             //random colors(strings) getting called
+//         default :
+//             return "sorry I don't know that color";
+//     }}
+//     //default meaning if none of the possible options are available
+// analyzeColor()
+// console.log(analyzeColor())
+//     // logging function to the console
+
+
+// /**
+//  * TODO:
+//  * Comment out the code above, and refactor your function to use a switch-case statement
+
 function analyzeColor(colorName) {
     // function name
     let colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
@@ -89,95 +100,44 @@ function analyzeColor(colorName) {
             return "plums are violet";
         case 'indigo':
             return "bluebirds are indigo";
-            //random colors(strings) getting called
+        //random colors(strings) getting called
         default :
             return "sorry I don't know that color";
     }}
-    //default meaning if none of the possible options are available
+//default meaning if none of the possible options are available
 analyzeColor()
 console.log(analyzeColor())
-    // logging function to the console
+// logging function to the console
 
-
-// /**
-//  * TODO:
-//  * Comment out the code above, and refactor your function to use a switch-case statement
-//  */
-//
 // /**
 //  * TODO:
 //  * Prompt the user for a color when the page loads, and pass the input from the
 //  * user to your `analyzeColor` function. Alert the return value from your
 //  * function to show it to the user.
 //  */
-// function analyzeColor(colorName) {
-//     // function name
 //
-//     switch (analyzeColor()) {
-//         case 'red':
-//             return "stop signs are red";
-//         case 'blue':
-//             return "the ocean is blue";
-//         case 'yellow':
-//             return "the sun is yellow";
-//         case 'green':
-//             return "the sun is yellow";
-//         case 'violet':
-//             return "plums are violet";
-//         case 'indigo':
-//             return "bluebirds are indigo";
-//
-//         default :
-//             return "sorry I don't know that color";
-//     }}
-// let color = prompt("Enter a color:");
-// let result = analyzeColor();
-// alert(result);
-// function analyzeColor(colorName) {
-//     switch (colorName.toLowerCase()) {
-//         case 'red':
-//             return "Stop signs are red.";
-//         case 'blue':
-//             return "The ocean is blue.";
-//         case 'yellow':
-//             return "The sun is yellow.";
-//         case 'green':
-//             return "Grass is green.";
-//         case 'violet':
-//             return "Plums are violet.";
-//         case 'indigo':
-//             return "Bluebirds are indigo.";
-//         default:
-//             return "Sorry, I don't know that color.";
-//     }
-// }
-//
-// let color = prompt("Enter a color:");
-// let result = analyzeColor(color);
-// alert(result);
-// function analyzeColor(colorName) {
-//     switch (colorName){
-//         case 'red':
-//             return "Stop signs are red.";
-//         case 'blue':
-//             return "The ocean is blue.";
-//         case 'yellow':
-//             return "The sun is yellow.";
-//         case 'green':
-//             return "Grass is green.";
-//         case 'violet':
-//             return "Plums are violet.";
-//         case 'indigo':
-//             return "Bluebirds are indigo.";
-//         default:
-//             return "Sorry, I don't know that color.";
-//     }
-// }
-//
-// window.onload = function() {
-//     let color = prompt("Enter a color:");
-//     let result = analyzeColor(color);
-//     alert(result);
+let color = prompt("Enter a color:");
+let result = analyzeColor(color);
+alert(result);
+function analyzeColor(colorName) {
+    switch (colorName){
+        case 'red':
+            return "Stop signs are red.";
+        case 'blue':
+            return "The ocean is blue.";
+        case 'yellow':
+            return "The sun is yellow.";
+        case 'green':
+            return "Grass is green.";
+        case 'violet':
+            return "Plums are violet.";
+        case 'indigo':
+            return "Bluebirds are indigo.";
+        default:
+            return "Sorry, I don't know that color.";
+    }
+}
+
 // };
 
 //
