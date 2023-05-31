@@ -219,7 +219,7 @@ function calculateTotal(luckyNumber){
             break
             // return "you get 50% discount"
         case 5:
-            discountedBillNumber = totalBillNumber * 1
+            discountedBillNumber = totalBillNumber * 0
             break
             // return "you get 100% discount! You get everything for free! "
         default:
@@ -249,3 +249,35 @@ console.log(calculateTotal(luckyNumber))
 //  * Can you refactor your code to use functions?
 //  * HINT: The way we prompt for a value could be improved
 //  */
+// Ask the user if they want to enter a number
+let wantsToEnterNumber = confirm("Would you like to enter a number?");
+
+// Check if the user clicked 'Ok'
+if (wantsToEnterNumber) {
+    // Prompt the user for a number
+    let userInput = prompt("Enter a number:");
+
+    // Convert the user input to a number
+    let number = parseFloat(userInput);
+
+    // Check if the entered value is a valid number
+    if (!isNaN(number)) {
+        // Check if the number is even or odd
+        let isEven = number % 2 === 0;
+        let evenOddMessage = isEven ? "The number is even." : "The number is odd.";
+
+        // Calculate the number plus 100
+        let numberPlus100 = number + 100;
+
+        // Check if the number is negative or positive
+        let positivityMessage = number < 0 ? "The number is negative." : "The number is positive.";
+
+        // Display the results using alerts
+        alert(evenOddMessage);
+        alert("The number plus 100 is: " + numberPlus100);
+        alert(positivityMessage);
+    } else {
+        // Display an alert for invalid input
+        alert("Invalid input. Please enter a valid number.");
+    }
+}
