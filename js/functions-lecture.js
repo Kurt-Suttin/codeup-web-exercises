@@ -39,8 +39,8 @@
 // }
 // addFourDividedByTwo(6)
 //     console.log(addFourDividedByTwo(6))
-//My Trail function
-    // Immediately Invoked Function Expression
+// My Trail function
+//     Immediately Invoked Function Expression
 // let result =(function(){
 //    let x = 3
 //    let y = 4
