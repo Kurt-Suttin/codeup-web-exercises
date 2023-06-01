@@ -151,8 +151,9 @@ function analyzeColor(colorName) {
 //  * the discount is 25%, if it's 3, 35%, if it's 4, 50%, and if it's 5 you'll get
 //  * everything for free!.
 //  *
-//  * Write a function named `calculateTotal` which accepts a lucky number and total
-//  * amount, and returns the discounted price.
+//  * Write a function named `calculateTotal`
+//  which accepts a lucky number and total amount,
+//  and returns the discounted price.
 //  *
 //  * Example:
 //  * calculateTotal(0, 100) // returns 100
@@ -162,27 +163,33 @@ function analyzeColor(colorName) {
 //  * Test your function by passing it various values and checking for the expected
 //  * return value.
 //  */
-function calculateTotal(luckyNumber){
-    let number = ['0', '1', '2', '3', '4', '5'];
-    let randomNumber = number[Math.floor(Math.random() * number.length)];
-    switch (randomNumber){
-        case '0':
-            return "you get no discount"
-        case '1':
-            return "you get 10% discount"
-        case '2':
-            return "you get 25% discount"
-        case '3':
-            return "you get 35% discount"
-        case '4':
-            return "you get 50% discount"
-        case '5':
-            return "you get 100% discount! You get everything for free! "
-        default:
-            return "you get no discount"
-    }
+let luckyNumber = Math.floor(Math.random() * 6);
+function calculateTotal(luckyNumber, totalAmount) {
+  switch (luckyNumber) {
+    case 0:
+      return totalAmount; // no discount
+    case 1:
+      return totalAmount * 0.9; // 10% discount
+    case 2:
+      return totalAmount * 0.75; // 25% discount
+    case 3:
+      return totalAmount * 0.65; // 35% discount
+    case 4:
+      return totalAmount * 0.5; // 50% discount
+    case 5:
+      return 0; // 100% discount (everything for free)
+    default:
+      return totalAmount; // for any other lucky number, no discount
+  }
 }
-console.log(calculateTotal())
+
+// Example usage:
+console.log(calculateTotal(0, 100)); // returns 100
+console.log(calculateTotal(4, 100)); // returns 50
+console.log(calculateTotal(5, 100)); // returns 0
+
+
+
 // //
 // /**
 //  * TODO:
@@ -193,7 +200,8 @@ console.log(calculateTotal())
 //  * price before the discount was, and what their price after the discount is.
 //  */
 // Generate a random number between 0 and 6
-let luckyNumber = Math.floor(Math.random() * 6);
+// let luckyNumber = Math.floor(Math.random() * 6);
+//                  put this formula in the question above 
 function calculateTotal(luckyNumber){
     let totalBillNumber = parseFloat(prompt("What's your bill total?:"));
     let discountedBillNumber;
