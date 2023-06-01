@@ -2,29 +2,13 @@
 
 /* ########################################################################## */
 
+
 // /**
 //  * TODO:
 //  * Create a function named `analyzeColor` that accepts a string that is a color
 //  * name as input. This function should return a message which relates to the
 //  * color stated in the argument of the function. For colors you do not have
 //  * responses written for, return a string stating so
-
-function analyzeColor(colorName) {
-    switch (colorName) {
-        case 'red':
-            return "stop signs are red";
-        case 'blue':
-            return "the ocean is blue";
-        case 'yellow':
-            return "the sun is yellow";
-        case 'green':
-            return "the sun is yellow";
-        case 'purple':
-            return "plums are purple";
-        default :
-            return "sorry I don't know that color";
-    }}
-// analyzeColor()
 // //  * Example:
 // //  *  > analyzeColor('blue') // returns "blue is the color of the sky"
 // //  *  > analyzeColor('red') // returns "Strawberries are red"
@@ -37,6 +21,17 @@ function analyzeColor(colorName) {
 // //  * Test your function by passing various string literals to it and
 // //  * console.logging the function's return value
 // //  */
+function analyzeColor(colorName) {
+    if (colorName === 'blue') {
+        return "blue is the color of the sky";
+    } else if (colorName === 'red') {
+        return "Strawberries are red";
+    } else {
+        return "I don't know anything about " + colorName;
+    }
+}
+analyzeColor()
+
 // //
 // // // Don't change the next two lines!
 // // // These lines create two variables for you:
@@ -55,7 +50,8 @@ function analyzeColor(colorName) {
     let colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
     let randomColor = colors[Math.floor(Math.random() * colors.length)];
     // local variables for this function
-    switch (randomColor) {
+    switch (randomColor)
+    {
         case 'red':
             return "stop signs are red";
         case 'blue':
@@ -116,8 +112,8 @@ console.log(analyzeColor())
 //  * function to show it to the user.
 //  */
 //
-let color = prompt("Enter a color:");
-let result = analyzeColor(color);
+let userColor = prompt("Enter a color:");
+let result = analyzeColor(userColor);
 alert(result);
 function analyzeColor(colorName) {
     switch (colorName){
@@ -185,9 +181,9 @@ function calculateTotal(luckyNumber, totalAmount) {
 
 // Example usage:
 console.log(calculateTotal(luckyNumber));
-// console.log(calculateTotal(1, 100)); // returns 100
-// console.log(calculateTotal(2, 100)); // returns 50
-// console.log(calculateTotal(3, 100)); // returns 0
+console.log(calculateTotal(1, 100)); // returns 100
+console.log(calculateTotal(2, 100)); // returns 50
+console.log(calculateTotal(3, 50)); // returns 0
 
 
 
@@ -261,15 +257,11 @@ console.log(calculateTotal(luckyNumber))
 // Ask the user if they want to enter a number
 
 let wantsToEnterNumber = confirm("Would you like to enter a number?");
-
-// Check if the user clicked 'Ok'
 if (wantsToEnterNumber) {
     // Prompt the user for a number
     let userInput = prompt("Enter a number:");
-
     // Convert the user input to a number
     let number = parseFloat(userInput);
-
     // Check if the entered value is a valid number
     if (!isNaN(number)) {
         // Check if the number is even or odd
