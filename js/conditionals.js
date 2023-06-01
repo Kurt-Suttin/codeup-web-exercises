@@ -50,32 +50,32 @@ function analyzeColor(colorName) {
 //  * Pass the `randomColor` variable to your 'analyzeColor' function and console.log the results.
 //  * You should see a different message every time you refresh the page
 //  */
-// function analyzeColor(colorName) {
-//     // function name
-//     let colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
-//     let randomColor = colors[Math.floor(Math.random() * colors.length)];
-//     // local variables for this function
-//     switch (randomColor) {
-//         case 'red':
-//             return "stop signs are red";
-//         case 'blue':
-//             return "the ocean is blue";
-//         case 'yellow':
-//             return "the sun is yellow";
-//         case 'green':
-//             return "the sun is yellow";
-//         case 'violet':
-//             return "plums are violet";
-//         case 'indigo':
-//             return "bluebirds are indigo";
-//             //random colors(strings) getting called
-//         default :
-//             return "sorry I don't know that color";
-//     }}
-//     //default meaning if none of the possible options are available
-// analyzeColor()
-// console.log(analyzeColor())
-//     // logging function to the console
+function analyzeColor(colorName) {
+    // function name
+    let colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
+    let randomColor = colors[Math.floor(Math.random() * colors.length)];
+    // local variables for this function
+    switch (randomColor) {
+        case 'red':
+            return "stop signs are red";
+        case 'blue':
+            return "the ocean is blue";
+        case 'yellow':
+            return "the sun is yellow";
+        case 'green':
+            return "the sun is yellow";
+        case 'violet':
+            return "plums are violet";
+        case 'indigo':
+            return "bluebirds are indigo";
+            //random colors(strings) getting called
+        default :
+            return "sorry I don't know that color";
+    }}
+    //default meaning if none of the possible options are available
+analyzeColor()
+console.log(analyzeColor())
+    // logging function to the console
 
 
 // /**
@@ -89,7 +89,7 @@ function analyzeColor(colorName) {
     // local variables for this function
     switch (randomColor) {
         case 'red':
-            return "stop signs are red";
+            return "roses are red";
         case 'blue':
             return "the ocean is blue";
         case 'yellow':
@@ -122,7 +122,7 @@ alert(result);
 function analyzeColor(colorName) {
     switch (colorName){
         case 'red':
-            return "Stop signs are red.";
+            return "roses are red.";
         case 'blue':
             return "The ocean is blue.";
         case 'yellow':
@@ -184,9 +184,10 @@ function calculateTotal(luckyNumber, totalAmount) {
 }
 
 // Example usage:
-console.log(calculateTotal(0, 100)); // returns 100
-console.log(calculateTotal(4, 100)); // returns 50
-console.log(calculateTotal(5, 100)); // returns 0
+console.log(calculateTotal(luckyNumber));
+// console.log(calculateTotal(1, 100)); // returns 100
+// console.log(calculateTotal(2, 100)); // returns 50
+// console.log(calculateTotal(3, 100)); // returns 0
 
 
 
@@ -201,7 +202,7 @@ console.log(calculateTotal(5, 100)); // returns 0
 //  */
 // Generate a random number between 0 and 6
 // let luckyNumber = Math.floor(Math.random() * 6);
-//                  put this formula in the question above 
+//                  put this formula in the question above
 function calculateTotal(luckyNumber){
     let totalBillNumber = parseFloat(prompt("What's your bill total?:"));
     let discountedBillNumber;
@@ -258,6 +259,7 @@ console.log(calculateTotal(luckyNumber))
 //  * HINT: The way we prompt for a value could be improved
 //  */
 // Ask the user if they want to enter a number
+
 let wantsToEnterNumber = confirm("Would you like to enter a number?");
 
 // Check if the user clicked 'Ok'
@@ -289,3 +291,4 @@ if (wantsToEnterNumber) {
         alert("Invalid input. Please enter a valid number.");
     }
 }
+
