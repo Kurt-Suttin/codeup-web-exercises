@@ -26,7 +26,7 @@ console.log(showMultiplicationTable(7));
 // and output to the console whether each number is odd or even. For example:
 function generateNumbersAndCheckOddEven() {
     for (let i = 0; i < 10; i++) {
-        const randomNumber = Math.floor(Math.random() * (200 - 20 + 1)) + 20;
+        const randomNumber = Math.floor(Math.random() * (200 - 20 )+ 1) + 20;
         const oddEven = randomNumber % 2 === 0 ? 'even' : 'odd';
         console.log(`${randomNumber} is ${oddEven}.`);
     }
@@ -59,26 +59,6 @@ for (let number = 1; number <= 9; number++) {
     let solution = number.toString().repeat(number);
     console.log(solution)
 }
-
-
-/////////////////////////
-
-// for (let value = 1; value <= 9; value++){
-//     let value.toString().repeat(value)
-// }console.log(value)
-//
-//////////////////////////
-// for (let i = 1; i <= 9; i++) {
-//     let line = '';
-//     for (let j = 1; j <= i; j++) {
-//         line += i;
-//     }
-//     console.log(line);
-// }
-// Expected output: "012345678"
-// ↑↑ NOTE TO SELF HATED THIS QUESTION ↑↑
-// no way I could figure that out without online resources
-//src""
 
 //=================================
 // Create a for loop that uses console.log to create the output shown below.
