@@ -112,7 +112,22 @@ If the input is not a string
   }
 
   console.log(getNum1To10());
+//========================Practice=Work========================================
+  /*
+          TODO - write a do-while loop that will alert the current date and time and
+            continue checking with the user if they want to see the latest time.
 
+            Current date can be created with new Date().toLocaleString()
+       */
+  // write a do-while loop
+  // that will alert the current date and time
+  // and continue checking with the user
+  // if they want to see the latest time.
+  let dt;
+  do {
+    dt = new Date();
+    confirm(dt.toLocaleString());
+  } while (confirm("Do you want to see the latest time?"));
 
 </script>
 

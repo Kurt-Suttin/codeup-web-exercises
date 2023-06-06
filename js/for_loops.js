@@ -1,4 +1,3 @@
-
 //Create a function named showMultiplicationTable that accepts a number
 // and console.logs the multiplication table for that number
 // (just multiply by the numbers 1 through 10)
@@ -8,6 +7,7 @@ function showMultiplicationTable(input) {
         console.log(`${input} x ${num} = ${input * num}`);
     }
 }
+
 console.log(showMultiplicationTable(7));
 // expected result
 //7 x 1 = 7
@@ -54,11 +54,13 @@ generateNumbersAndCheckOddEven();
 // 7777777
 // 88888888
 // 999999999
-let result = '';
-for (let value = 1; value <= 9; value++) {
-    result += value.toString().repeat(value);
+// let result = '';
+for (let number = 1; number <= 9; number++) {
+    let solution = number.toString().repeat(number);
+    console.log(solution)
 }
-console.log(result);
+
+
 /////////////////////////
 
 // for (let value = 1; value <= 9; value++){
@@ -100,7 +102,7 @@ console.log(result);
 // 15
 // 10
 // 5
-for (let i = 100;i > 0; i -= 5){
+for (let i = 100; i > 0; i -= 5) {
     console.log(i);
 }
 
