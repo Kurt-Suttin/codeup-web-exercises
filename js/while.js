@@ -35,7 +35,7 @@ while (num <= 65536)
     // changes value of number multiply by its self
 }
 //==================================================================
-//                          ICE CREAM
+//                          ICE CREAM Question
 // First write enough code that generates a random number between 50 and 100 representing
 // the amount of cones to sell before you start your loop.!
 // Inside of the loop your code should generate another random number between 1 and 5,
@@ -61,7 +61,7 @@ do {
         conesSold += conesBought;
         console.log(`Sold ${conesBought} cone(s). Total cones sold: ${conesSold}`);
     } else {
-        console.log("Out of stock!");
+        console.log("Out of Cones!");
     }
 } while (conesSold < conesToSell);
 
