@@ -74,7 +74,7 @@ console.log(result);
 //     console.log(line);
 // }
 // Expected output: "012345678"
-// ↑↑ HATED THIS QUESTION ↑↑
+// ↑↑ NOTE TO SELF HATED THIS QUESTION ↑↑
 // no way I could figure that out without online resources
 //src""
 
