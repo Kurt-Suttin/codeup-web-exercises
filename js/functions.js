@@ -85,7 +85,7 @@ function calculateTip(tipPercentage, totalBill) {
     let tipAmount = (tipPercentage / 100) * totalBill;
     return tipAmount;
 }
-
+console.log(calculateTip())
 //  *
 //  * Examples:
 //  * > calculateTip(0.20, 20) // returns 4
@@ -130,3 +130,4 @@ function applyDiscount(price, discountPercentage) {
     let discountedPrice = price - discountAmount;
     return discountedPrice;
 }
+console.log(applyDiscount())

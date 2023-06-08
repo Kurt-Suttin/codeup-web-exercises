@@ -59,7 +59,9 @@
             discount = shopper.amount * 0.12;
             totalAmount = shopper.amount - discount;
         }
-        console.log(`${shopper.name} spent $${shopper.amount.toFixed(2)}, received a discount of $${discount.toFixed(2)}, and paid $${totalAmount.toFixed(2)}.`);
+        console.log(`${shopper.name} spent $${shopper.amount.toFixed(2)}, 
+        received a discount of $${discount.toFixed(2)}, 
+        and paid $${totalAmount.toFixed(2)}.`);
     });
 
 
