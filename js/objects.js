@@ -27,10 +27,13 @@
      * Example
      * > console.log(person.sayHello()) // "Hello from Rick Sanchez!"
      */
-    let sayHello = `Hello from ${person.firstName} ${person.lastName}!`
-    console.log(sayHello)
+    // let sayHello = `Hello from ${person.firstName} ${person.lastName}!`
+    // console.log(sayHello)
 
-
+person.sayHello = function (){
+    return `Hello from ${person.firstName} ${person.lastName}`
+}
+console.log(person.sayHello())
     /** TODO:
      * HEB has an offer for the shoppers that buy products amounting to
      * more than $200. If a shopper spends more than $200, they get a 12%
@@ -43,7 +46,8 @@
      * discount, the discount, if any, and the amount after the discount.
      *
      * Uncomment the lines below to create an array of objects where each object
-     * represents one shopper. Use a foreach loop to iterate through the array,
+     * represents one shopper.
+     * Use a foreach loop to iterate through the array,
      * and console.log the relevant messages for each person
      */
 
@@ -98,56 +102,56 @@
      * > console.log(books[0].author.firstName) // "Douglas"
      * > console.log(books[0].author.lastName) // "Adams"
      */
-//     const books = [
-//         {
-//             title:"Under A Rock",
-//             author :
-//             {
-//                 firstName: "Patrick",
-//             lastName: "Star"
-//             }
-//         },
-//         {
-//             title:"A Double Rainbow",
-//             author :
-//                 {
-//                     firstName: "Stoney",
-//                     lastName: "McBlaze"
-//                 }
-//         },
-//         {
-//             title:"The Red Cup",
-//             author :
-//                 {
-//                     firstName: "Codey",
-//                     lastName: "Duck"
-//                 }
-//         },
-//         {
-//             title:"The Dark Room",
-//             author :
-//                 {
-//                     firstName: "Hellen",
-//                     lastName: "Keller"
-//                 }
-//         },   {
-//             title:"Best Egg Roll",
-//             author :
-//                 {
-//                     firstName: "Chackie",
-//                     lastName: "Jan"
-//                 }
-//         },
-//
-//
-// ]
-//     for (let book = 0; book < books.length ; book++){
-//         console.log("")
-//         console.log(books[book].title)
-//         console.log(books[book].author.firstName)
-//         console.log(books[book].author.lastName)
-//         console.log("")
-//     }
+    const books = [
+        {
+            title:"Under A Rock",
+            author :
+            {
+                firstName: "Patrick",
+            lastName: "Star"
+            }
+        },
+        {
+            title:"A Double Rainbow",
+            author :
+                {
+                    firstName: "Stoney",
+                    lastName: "McBlaze"
+                }
+        },
+        {
+            title:"The Red Cup",
+            author :
+                {
+                    firstName: "Codey",
+                    lastName: "Duck"
+                }
+        },
+        {
+            title:"The Dark Room",
+            author :
+                {
+                    firstName: "Hellen",
+                    lastName: "Keller"
+                }
+        },   {
+            title:"Best Egg Roll",
+            author :
+                {
+                    firstName: "Chu",
+                    lastName: "Jan"
+                }
+        },
+
+
+]
+    for (let book = 0; book < books.length ; book++){
+        console.log("")
+        console.log(books[book].title)
+        console.log(books[book].author.firstName)
+        console.log(books[book].author.lastName)
+        console.log("")
+    }
     /**
      * TODO:
      * Loop through the books array and output the following information about
@@ -172,54 +176,54 @@
      *      ---
      *      ...
      */
-    const books = [
-        {
-            title:"Under A Rock",
-            bookNumber:"Book # 1",
-            author :
-                {
-                    firstName: "Patrick",
-                    lastName: "Star"
-                }
-        },
-        {
-            title:"A Double Rainbow",
-            bookNumber:"Book # 2",
-            author :
-                {
-                    firstName: "Stoney",
-                    lastName: "McBlaze"
-                }
-        },
-        {
-            title:"The Red Cup",
-            bookNumber:"Book # 3",
-            author :
-                {
-                    firstName: "Codey",
-                    lastName: "Duck"
-                }
-        },
-        {
-            title:"The Dark Room",
-            bookNumber:"Book # 4",
-            author :
-                {
-                    firstName: "Hellen",
-                    lastName: "Keller"
-                }
-        },   {
-            title:"Best Egg Roll",
-            bookNumber:"Book # 5",
-            author :
-                {
-                    firstName: "Chackie",
-                    lastName: "Jan"
-                }
-        },
-
-
-    ]
+    // const books = [
+    //     {
+    //         title:"Under A Rock",
+    //         bookNumber:"Book # 1",
+    //         author :
+    //             {
+    //                 firstName: "Patrick",
+    //                 lastName: "Star"
+    //             }
+    //     },
+    //     {
+    //         title:"A Double Rainbow",
+    //         bookNumber:"Book # 2",
+    //         author :
+    //             {
+    //                 firstName: "Stoney",
+    //                 lastName: "McBlaze"
+    //             }
+    //     },
+    //     {
+    //         title:"The Red Cup",
+    //         bookNumber:"Book # 3",
+    //         author :
+    //             {
+    //                 firstName: "Codey",
+    //                 lastName: "Duck"
+    //             }
+    //     },
+    //     {
+    //         title:"The Dark Room",
+    //         bookNumber:"Book # 4",
+    //         author :
+    //             {
+    //                 firstName: "Hellen",
+    //                 lastName: "Keller"
+    //             }
+    //     },   {
+    //         title:"Best Egg Roll",
+    //         bookNumber:"Book # 5",
+    //         author :
+    //             {
+    //                 firstName: "Chu",
+    //                 lastName: "Jan"
+    //             }
+    //     },
+    //
+    //
+    // ]
     for (let book = 0; book < books.length ; book++){
         console.log("")
         console.log(books[book].bookNumber)
