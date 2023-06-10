@@ -8,7 +8,7 @@ function showMultiplicationTable(input) {
     }
 }
 
-console.log(showMultiplicationTable(7));
+console.log(showMultiplicationTable(69));
 // expected result
 //7 x 1 = 7
 // 7 x 2 = 14
@@ -21,6 +21,7 @@ console.log(showMultiplicationTable(7));
 // 7 x 9 = 63
 // 7 x 10 = 70
 //=================================
+
 //Use a for loop and the code function
 // to generate 10 random numbers between 20 and 200
 // and output to the console whether each number is odd or even. For example:
