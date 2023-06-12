@@ -1,0 +1,8 @@
+#header{
+    border:solid #333333;
+    background-color: cornsilk;
+    padding: 5px;
+}
+#header li{
+    padding: 3px;
+}
