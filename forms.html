@@ -8,7 +8,7 @@
 <form method="POST" action="https://request-inspector.glitch.me/">
     <div>
         <label for="email">Email:</label>
-        <input type="text" id="email" name="email" placeholder="email">
+        <input type="text" id="email" name="email" placeholder="email" required>
     </div>
 
     <div>
@@ -25,15 +25,15 @@
 </form>
 <br>
 <form>
-    <div>
-        <label for="bio">Tell us your Bio:</label>
 
-        <textarea id="bio" name="bio"
-                  rows="5" cols="33" placeholder="im 33 years old and love my cat henry">
+    <label for="bio">Tell us your Bio:</label>
+    <br>
+    <textarea id="bio" name="bio"
+              rows="5" cols="33" placeholder="im 33 years old and love my cat henry">
 
 </textarea>
-    </div>
 </form>
+
 <form>
     <fieldset>
         <legend>How did you hear about us:</legend>
@@ -55,7 +55,7 @@
         </div>
     </fieldset>
 </form>
-<form>
+<form method="POST" action="https://request-inspector.glitch.me/">
     <label for="pet-select">favorite pet?:</label>
 
     <select name="pets" id="pet-select">
@@ -67,11 +67,10 @@
         <option value="spider">Spider</option>
         <option value="goldfish">Goldfish</option>
     </select>
-    <div>
-        <button type="submit">
-            Submit
-        </button>
-    </div>
+
+    <button type="submit">
+        Submit
+    </button>
 
 </form>
 
