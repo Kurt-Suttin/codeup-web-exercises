@@ -78,7 +78,7 @@ fieldset {
 .form-control {
     padding: 4px 0;
     margin: .5em 0;
-    width: calc(100% - 8px);
+    width: calc(100% - 4px);
 
     /*width: 100%;*/
 
