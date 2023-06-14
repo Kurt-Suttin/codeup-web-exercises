@@ -5,14 +5,44 @@
 h1, h2, h3, h4, h5, h6 {
     text-decoration: underline;
 }
+
+.boom{
+    font-weight: bold;
+
+}
+.boom:hover{
+    font-weight: bold;
+    text-decoration-color: hotpink;
+    transform: translateX(700%);
+    transition: 4s;
+
+}
+.tenthPreDiv{
+
+    width: 200px; /* Adjust the width and height according to your image */
+    height: 200px;
+    position: relative;
+}
+
 .tenthPre{
-    border-radius: 50px;
-    float: right;
+    font-size: 200px;
+    width: 100%;
+    height: auto;
+    transition: transform 0.5s ease;
 
    }
 .tenthPre:hover {
-    width: 250px;
-    transition: 1s;
+    transform: translateX(700%);
+    transition: 4s;
+}
+.nyancat{
+   position: relative;
+    float: right;
+}
+
+.nyancat:hover{
+    transform: translateX(-400%);
+    transition: 4s;
 }
 
 .body-bg {
