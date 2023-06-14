@@ -1,0 +1,35 @@
+.fancy-header {
+    text-align: center;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    text-decoration: underline;
+}
+
+.body-bg {
+    background-color: #7EDADAFF;
+    background-image: url("../images/abstarct-sun-img.jpeg");
+
+}
+
+ul li, ol li {
+    list-style-type: square;
+    font-family: 'Open Sans', sans-serif;
+    color: #FFFFFFFF;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+
+}
+.offer-table td , .offer-table th{
+    padding: 10px;
+    color: #FFFFFFFF;
+
+}
+a {
+    font-size: 20px;
+}
+a:visited {
+    color: #e3092d;
+}
