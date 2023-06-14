@@ -61,7 +61,7 @@ fieldset {
 
 .btn {
     padding: 8px;
-    text-decoration-color: white;
+    color: white;
     font-weight: bold;
     border: 1px solid lightgrey;
     background-color: #0fb784;
@@ -71,9 +71,9 @@ fieldset {
     /* The border of this element should be 1px, and its color should be light grey */
 
 }
-.btn:hover{
-    cursor: pointer;
-}
+/*.btn:hover{*/
+/*    cursor: pointer;*/
+/*}*/
 
 .form-control {
     padding: 4px 0;
