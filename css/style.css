@@ -1,48 +1,141 @@
+/* @keyframes rainbow sourced from https://codepen.io/zak/pen/rWJzPy
+*/
+@keyframes rainbow{
+    100%,0%{
+        color: rgb(255,0,0);
+    }
+    8%{
+        color: rgb(255,127,0);
+    }
+    16%{
+        color: rgb(255,255,0);
+    }
+    25%{
+        color: rgb(127,255,0);
+    }
+    33%{
+        color: rgb(0,255,0);
+    }
+    41%{
+        color: rgb(0,255,127);
+    }
+    50%{
+        color: rgb(0,255,255);
+    }
+    58%{
+        color: rgb(0,127,255);
+    }
+    66%{
+        color: rgb(0,0,255);
+    }
+    75%{
+        color: rgb(127,0,255);
+    }
+    83%{
+        color: rgb(255,0,255);
+    }
+    91%{
+        color: rgb(255,0,127);
+    }
+}
+
 .fancy-header {
     text-align: center;
+    animation: rainbow 2.5s linear;
+    animation-iteration-count: infinite;
 }
 
 h1, h2, h3, h4, h5, h6 {
+    animation: rainbow 2.5s linear;
+    animation-iteration-count: infinite;
     text-decoration: underline;
+    font-weight: 600;
+}
+h1:hover{
+    font-size: 40px;
+    transition: font-size 1s;
+}
+h2:hover{
+    font-size: 40px;
+    transition: font-size 1s;
+}
+h3:hover{
+    font-size: 40px;
+    transition: font-size 1s;
+}
+h4:hover{
+    font-size: 40px;
+    transition: font-size 1s;
+}
+h5:hover{
+    font-size: 40px;
+    transition: font-size 1s;
+}
+h6:hover{
+    font-size: 40px;
+    transition: font-size 1s;
 }
 
-.boom{
+.paragraph{
+    font-size: 25px;
+    animation: rainbow 2.5s linear;
+    animation-iteration-count: infinite;
+}
+
+
+.boom {
     font-weight: bold;
 
 }
-.boom:hover{
+
+.boom:hover {
     font-weight: bold;
     text-decoration-color: hotpink;
-    transform: translateX(700%);
-    transition: 4s;
+    transform: translateX(1000%);
+    transition: 15s;
 
 }
-.tenthPreDiv{
+
+.tenthPreDiv {
 
     width: 200px; /* Adjust the width and height according to your image */
     height: 200px;
     position: relative;
 }
 
-.tenthPre{
+.tenthPre {
     font-size: 200px;
     width: 100%;
     height: auto;
     transition: transform 0.5s ease;
 
-   }
-.tenthPre:hover {
-    transform: translateX(700%);
-    transition: 4s;
 }
-.nyancat{
-   position: relative;
+
+.tenthPre:hover {
+    transform: translateX(1000%);
+    transition: 5s;
+}
+
+.nyancat {
+    position: relative;
     float: right;
 }
 
-.nyancat:hover{
-    transform: translateX(-400%);
-    transition: 4s;
+.nyancat:hover {
+    transform: translateX(-1000%);
+    transition: 5s;
+}
+
+.dogg {
+    width: 100px; /* Adjust the width and height according to your image */
+    height: 100px;
+    display: flex;
+    justify-content: end;
+}
+
+.dogg:hover {
+    transform: translateX(10000%);
+    transition: 30s;
 }
 
 .body-bg {
@@ -55,49 +148,70 @@ h1, h2, h3, h4, h5, h6 {
 
 ul li, ol li {
     font-family: 'Open Sans', sans-serif;
-    color: #000000;
+    animation: rainbow 2.5s linear;
+    animation-iteration-count: infinite;
     font-size: 20px;
 }
+
 ol li {
     list-style-type: upper-roman;
 }
+
 ul li:hover {
     list-style-type: square;
     font-size: 30px;
     transition: 1s;
 }
-ol li:hover{
+
+ol li:hover {
     font-size: 30px;
     transition: 1s;
 }
+
 body {
     font-family: 'Open Sans', sans-serif;
 }
 
-.offer-table td , .offer-table th{
+.offer-table td, .offer-table th {
     padding: 10px;
-    color: #000000;
+    animation: rainbow 2.5s linear;
+    animation-iteration-count: infinite;
 
 }
+.offer-table td:hover {
+    font-size: 25px;
+    transition: font-size 1s;
+}
+
+.offer-table th:hover {
+    font-size: 25px;
+    transition: font-size 1s;
+}
+
 a {
     font-size: 15px;
 }
+
 a:visited {
-    color: #e3092d;
+    animation: rainbow 2.5s linear;
+    animation-iteration-count: infinite;;
 }
-a:hover{
-    font-size: 25px ;
+
+a:hover {
+    font-size: 25px;
     transition: font-size 1s;
 }
-td>img {
+
+td > img {
     aspect-ratio: 4 / 3;
     width: 450px;
-object-fit: cover;
+    object-fit: cover;
     object-position: top;
     border-radius: 20px;
     border: 5px solid #fff;
 }
-td>img:hover{
+
+td > img:hover {
     width: 600px;
     transition: 1.5s;
 }
