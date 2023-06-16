@@ -1,7 +1,7 @@
 :root {
     --primary: #979797;
     --border-radius: 5px;
-    --secondary: #7a7a7a;
+    --secondary: #6D6D6D;
 }
 
 body {
@@ -55,10 +55,9 @@ ul.d-flex {
 
 section.container.hero {
 
-    padding: 5px;
+    padding: 40px 0;
     background-color: lightgray;
-    min-height: 600px;
-    max-height: 0px;
+    min-height: 80vh;
 
 }
 
@@ -68,7 +67,7 @@ section.container.hero {
 }
 
 .big-text {
-    font-size: xx-large;
+    font-size: 50px;
     color:var(--secondary);
     font-weight: 300;
 }
