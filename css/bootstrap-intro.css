@@ -1,0 +1,8 @@
+.bg-imgK{
+    background-image: url("../images/desert-afgahn.jpeg");
+    background-size: cover;
+    background-attachment: fixed;
+}
+li{
+    font-size: 20px;
+}
