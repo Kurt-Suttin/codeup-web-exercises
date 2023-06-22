@@ -1,0 +1,8 @@
+.container-fluid.cv-hero{
+    min-height: 30vh;
+    background-image: url("../images/pizza2.jpeg");
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+
