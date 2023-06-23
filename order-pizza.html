@@ -35,7 +35,7 @@
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                           aria-expanded="false">
+                           aria-expanded="true">
                             Menu
                         </a>
                         <ul class="dropdown-menu">
@@ -82,13 +82,13 @@
                 </li>
                 <li class="nav-item" role="presentation">
                     <button class="nav-link" id="sauces-tab" data-bs-toggle="tab" data-bs-target="#sauces-tab-pane"
-                            type="button" role="tab" aria-controls="sauces-tab-pane" aria-selected="true">(2)Cheese
+                            type="button" role="tab" aria-controls="sauces-tab-pane" aria-selected="false">(2)Cheese
                         and Sauce
                     </button>
                 </li>
                 <li class="nav-item" role="presentation">
                     <button class="nav-link" id="toppings-tab" data-bs-toggle="tab" data-bs-target="#toppings-tab-pane"
-                            type="button" role="tab" aria-controls="toppings-tab-pane" aria-selected="true">(3)
+                            type="button" role="tab" aria-controls="toppings-tab-pane" aria-selected="false">(3)
                         Toppings
                     </button>
                 </li>
@@ -158,133 +158,138 @@
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="tab-pane fade" id="sauces-tab-pane" role="tabpanel" aria-labelledby="sauces-tab"
-             tabindex="0">
-            <div class="card">
+            <div class="tab-content" id="myTabContent">
+                <div class="tab-pane fade" id="sauces-tab-pane" role="tabpanel" aria-labelledby="sauces-tab"
+                     tabindex="0">
+                    <div class="card">
 
-                <h5 class="card-header bg-primary text-light">Choose Cheese and Sauce</h5>
-                <div class="card-body">
-                    <div class="card full-width">
-                        <div class="card-header">
-                            Cheese
-                        </div>
-                        <div class="card full-width">
-                            <ul class="list-group list-group-flush gap-1">
-
-                                <li class="list-group-item">How much?</li>
-
-                                <div class="form-check list-group-item">
-                                    <select class="form-select" aria-label="Default select example">
-                                        <option selected>Normal</option>
-                                        <option value="1">Half</option>
-                                        <option value="2">Double</option>
-                                        <option value="3">None</option>
-                                    </select>
+                        <h5 class="card-header bg-primary text-light">Choose Cheese and Sauce</h5>
+                        <div class="card-body">
+                            <div class="card full-width">
+                                <div class="card-header">
+                                    Cheese
                                 </div>
-                            </ul>
+                                <div class="card full-width">
+                                    <ul class="list-group list-group-flush gap-1">
 
-                        </div>
-                        <br>
-                        <div class="card-header rounded">
-                            Sauce
-                        </div>
-                        <div class="card full-width">
-                            <ul class="list-group list-group-flush">
-                                <li class="list-group-item">What Type?</li>
+                                        <li class="list-group-item">How much?</li>
 
-                                <div class="form-check list-group-item">
-                                    <select class="form-select" aria-label="Default select example">
-                                        <option selected>Tomato</option>
-                                        <option value="1">BBQ</option>
-                                        <option value="2">Alfredo</option>
-                                        <option value="3">None</option>
-                                    </select>
-                                    <li class="list-group-item">How Much?</li>
+                                        <div class="form-check list-group-item">
+                                            <select class="form-select" aria-label="Default select example">
+                                                <option selected>Normal</option>
+                                                <option value="1">Half</option>
+                                                <option value="2">Double</option>
+                                                <option value="3">None</option>
+                                            </select>
+                                        </div>
+                                    </ul>
 
-                                    <div class="form-check list-group-item">
-                                        <select class="form-select" aria-label="Default select example">
-                                            <option selected>Normal</option>
-                                            <option value="1">Half</option>
-                                            <option value="2">Double</option>
-                                            <option value="3">None</option>
-                                        </select>
+                                </div>
+                                <br>
+                                <div class="card-header rounded">
+                                    Sauce
+                                </div>
+                                <div class="card full-width">
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item">What Type?</li>
+
+                                        <div class="form-check list-group-item">
+                                            <select class="form-select" aria-label="Default select example">
+                                                <option selected>Tomato</option>
+                                                <option value="1">BBQ</option>
+                                                <option value="2">Alfredo</option>
+                                                <option value="3">None</option>
+                                            </select>
+                                            <li class="list-group-item">How Much?</li>
+
+                                            <div class="form-check list-group-item">
+                                                <select class="form-select" aria-label="Default select example">
+                                                    <option selected>Normal</option>
+                                                    <option value="1">Half</option>
+                                                    <option value="2">Double</option>
+                                                    <option value="3">None</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </ul>
+                                    <div class="d-flex flex-row-reverse card-footer">
+                                        <a href="#" class="btn btn-primary gap-5">Next Step > </a>
+                                        <a href="#" class="btn btn-primary gap-5"> < Previous Step </a>
                                     </div>
                                 </div>
-                            </ul>
-                            <div class="d-flex flex-row-reverse card-footer">
-                                <a href="#" class="btn btn-primary">Next Step > </a>
-                                <a href="#" class="btn btn-primary"> < Previous Step </a>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-        <div class="tab-pane fade" id="toppings-tab-pane" role="tabpanel" aria-labelledby="toppings-tab"
-             tabindex="0">
-            <div class="card">
-                <div class="card-header bg-primary text-light"><h5>
-                    Choose Toppings
-                </h5></div>
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item card-header">Choose Meats</li>
-                    <div class="form-check list-group-item">
-                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                        <label class="form-check-label" for="flexCheckDefault">
-                            Beef
-                        </label>
-                    </div>
-                    <div class="form-check list-group-item">
-                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                        <label class="form-check-label" for="flexCheckDefault">
-                          Ham
-                        </label>
-                    </div>
-                    <div class="form-check list-group-item">
-                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                        <label class="form-check-label" for="flexCheckDefault">
-                          Philly Steak
-                        </label>
-                    </div>
-                    <div class="form-check list-group-item">
-                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                        <label class="form-check-label" for="flexCheckDefault">
-                            Back
-                        </label>
-                    </div>
-                </ul>
-                <br>
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item card-header">Choose Non Meats</li>
-                    <div class="form-check list-group-item">
-                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                        <label class="form-check-label" for="flexCheckDefault">
-                            Green Peppers
-                        </label>
-                    </div>
-                    <div class="form-check list-group-item">
-                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                        <label class="form-check-label" for="flexCheckDefault">
-                            Mushrooms
-                        </label>
-                    </div>
-                    <div class="form-check list-group-item">
-                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                        <label class="form-check-label" for="flexCheckDefault">
-                          Onions
-                        </label>
-                    </div>
-                    <div class="form-check list-group-item">
-                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                        <label class="form-check-label" for="flexCheckDefault">
-                           Jalepeno peppers
-                        </label>
-                    </div>
-                </ul>
-                <div class="card-footer">
-                    <div class="d-flex flex-row-reverse card-footer">
-                        <a href="#" class="btn btn-primary">Check out </a>
+                <div class="tab-content" id="myTabContent">
+
+                    <div class="tab-pane fade" id="toppings-tab-pane" role="tabpanel" aria-labelledby="toppings-tab"
+                         tabindex="0">
+                        <div class="card">
+                            <div class="card-header bg-primary text-light"><h5>
+                                Choose Toppings
+                            </h5></div>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item card-header">Choose Meats</li>
+                                <div class="form-check list-group-item">
+                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                    <label class="form-check-label" for="flexCheckDefault">
+                                        Beef
+                                    </label>
+                                </div>
+                                <div class="form-check list-group-item">
+                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                    <label class="form-check-label" for="flexCheckDefault">
+                                        Ham
+                                    </label>
+                                </div>
+                                <div class="form-check list-group-item">
+                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                    <label class="form-check-label" for="flexCheckDefault">
+                                        Philly Steak
+                                    </label>
+                                </div>
+                                <div class="form-check list-group-item">
+                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                    <label class="form-check-label" for="flexCheckDefault">
+                                        Back
+                                    </label>
+                                </div>
+                            </ul>
+                            <br>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item card-header">Choose Non Meats</li>
+                                <div class="form-check list-group-item">
+                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                    <label class="form-check-label" for="flexCheckDefault">
+                                        Green Peppers
+                                    </label>
+                                </div>
+                                <div class="form-check list-group-item">
+                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                    <label class="form-check-label" for="flexCheckDefault">
+                                        Mushrooms
+                                    </label>
+                                </div>
+                                <div class="form-check list-group-item">
+                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                    <label class="form-check-label" for="flexCheckDefault">
+                                        Onions
+                                    </label>
+                                </div>
+                                <div class="form-check list-group-item">
+                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                    <label class="form-check-label" for="flexCheckDefault">
+                                        Jalepeno peppers
+                                    </label>
+                                </div>
+                            </ul>
+                            <div class="card-footer">
+                                <div class="d-flex flex-row-reverse card-footer">
+                                    <a href="#" class="btn btn-primary">Check out </a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
