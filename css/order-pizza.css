@@ -1,4 +1,4 @@
-.container-fluid.cv-hero{
+.container-fluid.cv-hero {
     min-height: 30vh;
     max-width: 81em;
     background-image: url("../images/pizza2.jpeg");
@@ -6,10 +6,16 @@
     background-attachment: fixed;
     background-position: center;
 }
-.cart{
+
+.cart {
     width: 20px;
     height: 20px
 }
-.list-select-padding{
-padding-left: 1em;
- }
+
+.list-select-padding {
+    padding-left: 1em;
+}
+
+.search-font {
+    font-size: 10px;
+}
