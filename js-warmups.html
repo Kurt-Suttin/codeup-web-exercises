@@ -33,158 +33,158 @@
     //     return userNumber;
     //   }
     // }
-  //   function addTen(input) {
-  //       let userNumber = input + 10;
-  //       if (isNaN(userNumber)) {
-  //           return false;
-  //       } else {
-  //           return userNumber;
-  //       }
-  //   }
-  //
-  //   console.log(addTen(0));// returns 10
-  //   console.log(addTen(10)); // returns 20
-  //   console.log(addTen('bob'));// returns false
-  //   console.log(addTen(100));// returns 110
-  //   console.log(addTen(-5));// returns 5
-  //   console.log(addTen("10"));// returns 1010 , so that's a bug
-  //
-  //
-  //   // ================================= WARM UP
-  //
-  //   // Copy and paste the following warm up in your `js-warmups.html` file and complete the TODO...
-  //
-  //   /* TODO
-  //
-  //   Write a function, makeUpperCase, that takes in an input and returns the input in uppercase if it is a string.
-  //   If the input is not a string, return false.
-  //
-  //   Examples:
-  //
-  //   makeUpperCase('cat') // returns 'CAT'
-  //   makeUpperCase('DoG') // returns 'DOG'
-  //   makeUpperCase('CODEUP') // returns 'CODEUP'
-  //   makeUpperCase(54) // returns false
-  //   makeUpperCase(true) // returns false
-  //   makeUpperCase(null) // returns false
-  // Write a function, makeUpperCase,
-  // that takes in an input and returns the input in uppercase
-  // if it is a string.
-  // If the input is not a string
-  // ,return false.
-  //
-  //   */
-  //   function makeUpperCase(input) {
-  //       if (typeof input === "string") {
-  //           return input.toUpperCase();
-  //       } else {
-  //           return false;
-  //       }
-  //   }
-  //
-  //   console.log(makeUpperCase('cat')); // returns 'CAT'
-  //   console.log(makeUpperCase('DoG'));// returns 'DOG'
-  //   console.log(makeUpperCase('CODEUP')); // returns 'CODEUP'
-  //   console.log(makeUpperCase(54)); // returns false
-  //   console.log(makeUpperCase(true)); // returns false
-  //   console.log(makeUpperCase(null)); // returns false
-  //
-  //   // ================================= WARM UP
-  //   // while loop
-  //   let one = 1;
-  //   while (one < 10) {
-  //       console.log(` ${one} is less than 10`);
-  //       one++;
-  //   }
-  //   for (let i = 0; i < 10; i++) {
-  //       console.log('for loop iteration #' + i);
-  //   }
-  //
-  //   let kurt = 1
-  //   while (kurt < 11) {
-  //       console.log("Print Kurt " + kurt + " times!");
-  //       kurt++;
-  //   }
-  //
-  //   function getNum1To10() {
-  //       let num = 0;
-  //       while (num < 1 || num > 10) {
-  //           num = prompt('enter number between 1 and 10')
-  //       }
-  //   }
-  //
-  //   console.log(getNum1To10());
-  //
-  //   //============================================================
-  //
-  //
-  //   // //========================Practice=Work========================================
-  //   //   /*
-  //   //           TODO - write a do-while loop that will alert the current date and time and
-  //   //             continue checking with the user if they want to see the latest time.
-  //   //
-  //   //             Current date can be created with new Date().toLocaleString()
-  //   //        */
-  //   //   // write a do-while loop
-  //   //   // that will alert the current date and time
-  //   //   // and continue checking with the user
-  //   //   // if they want to see the latest time.
-  //   //   let dt;
-  //   //   do {
-  //   //     dt = new Date();
-  //   //     confirm(dt.toLocaleString());
-  //   //   } while (confirm("Do you want to see the latest time?"));
-  //   //
-  //   //
-  //   //   ================================= WARM UP
-  //
-  //   // Write a function, sumIsEqual,
-  //   // that takes in three inputs.
-  //   // The function should
-  //   //
-  //   //  if the sum of the first two inputs are equal to the third input.
-  //   // return true
-  //
-  //   //  If any of the inputs are not numbers
-  //   //  return false.
-  //   //
-  //   console.log(sumIsEqual(1, 2, 3)) // returns true
-  //   console.log(sumIsEqual(2, 2, 4)); // returns true
-  //   console.log(sumIsEqual(10, 2, 12)); // returns true
-  //   console.log(sumIsEqual(10, false, 12)); // returns false
-  //   console.log(sumIsEqual('10', '2', 12)); // returns false
-  //   console.log(sumIsEqual('fred', 'bob', 'hello')); // returns false
-  //
-  //
-  //   // function sumIsEqual(input1, input2, input3) {
-  //   //     if (isNaN(input1)|| isNaN(input2) || isNaN(input3) )
-  //   //     { return false
-  //   //     else if (input1 + input2 === input3)
-  //   //         return true
-  //   //     }
-  //   //
-  //   // }
-  //   function sumIsEqual(input1, input2, input3) {
-  //       if (isNaN(input1) || isNaN(input2) || isNaN(input3)) {
-  //           return false;
-  //       } else if (input1 + input2 === input3) {
-  //           return true;
-  //       }
-  //   }
-  //
-  //   function isANumber(input) {
-  //       if (typeof input === "boolean" || input === null)
-  //           return false;
-  //       else
-  //           return !isNaN(input)
-  //   }
-  //   function returnProduct([input1, input2, input3]) {
-  //       if (isNaN(input1) || isNaN(input2) || isNaN(input3)) {
-  //           return false;
-  //       } else {
-  //           return input1 * input2 * input3;
-  //       }
-  //   }
+    //   function addTen(input) {
+    //       let userNumber = input + 10;
+    //       if (isNaN(userNumber)) {
+    //           return false;
+    //       } else {
+    //           return userNumber;
+    //       }
+    //   }
+    //
+    //   console.log(addTen(0));// returns 10
+    //   console.log(addTen(10)); // returns 20
+    //   console.log(addTen('bob'));// returns false
+    //   console.log(addTen(100));// returns 110
+    //   console.log(addTen(-5));// returns 5
+    //   console.log(addTen("10"));// returns 1010 , so that's a bug
+    //
+    //
+    //   // ================================= WARM UP
+    //
+    //   // Copy and paste the following warm up in your `js-warmups.html` file and complete the TODO...
+    //
+    //   /* TODO
+    //
+    //   Write a function, makeUpperCase, that takes in an input and returns the input in uppercase if it is a string.
+    //   If the input is not a string, return false.
+    //
+    //   Examples:
+    //
+    //   makeUpperCase('cat') // returns 'CAT'
+    //   makeUpperCase('DoG') // returns 'DOG'
+    //   makeUpperCase('CODEUP') // returns 'CODEUP'
+    //   makeUpperCase(54) // returns false
+    //   makeUpperCase(true) // returns false
+    //   makeUpperCase(null) // returns false
+    // Write a function, makeUpperCase,
+    // that takes in an input and returns the input in uppercase
+    // if it is a string.
+    // If the input is not a string
+    // ,return false.
+    //
+    //   */
+    //   function makeUpperCase(input) {
+    //       if (typeof input === "string") {
+    //           return input.toUpperCase();
+    //       } else {
+    //           return false;
+    //       }
+    //   }
+    //
+    //   console.log(makeUpperCase('cat')); // returns 'CAT'
+    //   console.log(makeUpperCase('DoG'));// returns 'DOG'
+    //   console.log(makeUpperCase('CODEUP')); // returns 'CODEUP'
+    //   console.log(makeUpperCase(54)); // returns false
+    //   console.log(makeUpperCase(true)); // returns false
+    //   console.log(makeUpperCase(null)); // returns false
+    //
+    //   // ================================= WARM UP
+    //   // while loop
+    //   let one = 1;
+    //   while (one < 10) {
+    //       console.log(` ${one} is less than 10`);
+    //       one++;
+    //   }
+    //   for (let i = 0; i < 10; i++) {
+    //       console.log('for loop iteration #' + i);
+    //   }
+    //
+    //   let kurt = 1
+    //   while (kurt < 11) {
+    //       console.log("Print Kurt " + kurt + " times!");
+    //       kurt++;
+    //   }
+    //
+    //   function getNum1To10() {
+    //       let num = 0;
+    //       while (num < 1 || num > 10) {
+    //           num = prompt('enter number between 1 and 10')
+    //       }
+    //   }
+    //
+    //   console.log(getNum1To10());
+    //
+    //   //============================================================
+    //
+    //
+    //   // //========================Practice=Work========================================
+    //   //   /*
+    //   //           TODO - write a do-while loop that will alert the current date and time and
+    //   //             continue checking with the user if they want to see the latest time.
+    //   //
+    //   //             Current date can be created with new Date().toLocaleString()
+    //   //        */
+    //   //   // write a do-while loop
+    //   //   // that will alert the current date and time
+    //   //   // and continue checking with the user
+    //   //   // if they want to see the latest time.
+    //   //   let dt;
+    //   //   do {
+    //   //     dt = new Date();
+    //   //     confirm(dt.toLocaleString());
+    //   //   } while (confirm("Do you want to see the latest time?"));
+    //   //
+    //   //
+    //   //   ================================= WARM UP
+    //
+    //   // Write a function, sumIsEqual,
+    //   // that takes in three inputs.
+    //   // The function should
+    //   //
+    //   //  if the sum of the first two inputs are equal to the third input.
+    //   // return true
+    //
+    //   //  If any of the inputs are not numbers
+    //   //  return false.
+    //   //
+    //   console.log(sumIsEqual(1, 2, 3)) // returns true
+    //   console.log(sumIsEqual(2, 2, 4)); // returns true
+    //   console.log(sumIsEqual(10, 2, 12)); // returns true
+    //   console.log(sumIsEqual(10, false, 12)); // returns false
+    //   console.log(sumIsEqual('10', '2', 12)); // returns false
+    //   console.log(sumIsEqual('fred', 'bob', 'hello')); // returns false
+    //
+    //
+    //   // function sumIsEqual(input1, input2, input3) {
+    //   //     if (isNaN(input1)|| isNaN(input2) || isNaN(input3) )
+    //   //     { return false
+    //   //     else if (input1 + input2 === input3)
+    //   //         return true
+    //   //     }
+    //   //
+    //   // }
+    //   function sumIsEqual(input1, input2, input3) {
+    //       if (isNaN(input1) || isNaN(input2) || isNaN(input3)) {
+    //           return false;
+    //       } else if (input1 + input2 === input3) {
+    //           return true;
+    //       }
+    //   }
+    //
+    //   function isANumber(input) {
+    //       if (typeof input === "boolean" || input === null)
+    //           return false;
+    //       else
+    //           return !isNaN(input)
+    //   }
+    //   function returnProduct([input1, input2, input3]) {
+    //       if (isNaN(input1) || isNaN(input2) || isNaN(input3)) {
+    //           return false;
+    //       } else {
+    //           return input1 * input2 * input3;
+    //       }
+    //   }
 
     function returnProduct([input1, input2, input3]) {
         return (isNaN(input1) || isNaN(input2) || isNaN(input3)) ? false : input1 * input2 * input3;
@@ -196,6 +196,58 @@
     console.log(returnProduct([4, 0, 2])); // returns 4 * 0 * 2 = 0
     console.log(returnProduct([5, 3, 2])); // returns 5 * 3 * 2 = 30
 
+
+    // function returnTotalSales() {
+    //     let salesData = [
+    //         {Month: "Jan", salary: 10},
+    //         {Month: "Feb", salary: 20},
+    //         {Month: "March", salary: 30},
+    //         {Month: "April", salary: 10},
+    //         {Month: "May", salary: 20},
+    //         {Month: "June", salary: 30},
+    //         {Month: "July", salary: 10},
+    //         {Month: "August", salary: 20},
+    //         {Month: "September", salary: 30},
+    //         {Month: "October", salary: 10},
+    //         {Month: "November", salary: 20},
+    //         {Month:"December", salary: 30},]
+    //
+    //     let sum = 0;
+    //
+    //     salesData.forEach(element => {
+    //         sum += this.salary;
+    //     });
+    // }
+    //
+    // console.log(returnTotalSales(salesData));
+
+    function returnTotalSales() {
+        let salesData = [
+            {Month: "Jan", sales: 10},
+            {Month: "Feb", sales: 20},
+            {Month: "March", sales: 30},
+            {Month: "April", sales: 10},
+            {Month: "May", sales: 20},
+            {Month: "June", sales: 30},
+            {Month: "July", sales: 10},
+            {Month: "August", sales: 20},
+            {Month: "September", sales: 30},
+            {Month: "October", sales: 10},
+            {Month: "November", sales: 20},
+            {Month: "December", sales: 30}
+        ];
+
+        let sum = 0;
+
+        salesData.forEach(element => {
+            sum += element.sales;
+        });
+
+        return sum;
+    }
+
+    console.log(`This is your total sales this year: $${returnTotalSales()}`);
+// reformed from (https://bobbyhadz.com/blog/javascript-get-sum-of-array-object-values)
 
 </script>
 
