@@ -275,19 +275,19 @@
             totalItemsSold: 30
         }
     ];
-//
-//     returnAvgSales(salesData) // returns 9.4
-// function returnAvgSales(salesData){
-//         return returnTotalSales(salesData) / salesData.length;
-// }
-//
-//     console.log(returnAvgSales(salesData) , 9.4);
+    //
+    //     returnAvgSales(salesData) // returns 9.4
+    // function returnAvgSales(salesData){
+    //         return returnTotalSales(salesData) / salesData.length;
+    // }
+    //
+    //     console.log(returnAvgSales(salesData) , 9.4);
 
 
-    function returnAvgSales(salesData){
+    function returnAvgSales(salesData) {
         let total = 0
         salesData.forEach(salesDataObj => {
-        salesDataObj += salesDataObj.totalItemsSold
+            salesDataObj += salesDataObj.totalItemsSold
         });
 
     }
@@ -297,6 +297,85 @@
     //     let sum = sale.totalItemsSold;
     //     let average = sum / value;
     //     result += firstLetter;
+
+    // ================================= WARM UP
+
+    // Create a function, returnAdmins, that takes in an array of user objects
+    // and returns an array of only the admin user objects. Assume the array
+    // has at least one user object and all elements have an isAdmin property.
+    //
+    //     Example:
+
+
+    const users = [
+
+        {
+            username: 'fred123',
+            password: 'letmein',
+            email: 'fred123@email.com',
+            isAdmin: true
+        },
+        {
+            username: 'cindy123',
+            password: 'hello123',
+            email: 'cindy123@email.com',
+            isAdmin: false
+        },
+        {
+            username: 'kathy123',
+            password: 'letmein',
+            email: 'kathy123@email.com',
+            isAdmin: true
+        },
+        {
+            username: 'kyle123',
+            password: 'letmein',
+            email: 'kyle123@email.com',
+            isAdmin: false
+        }
+    ]
+
+
+    function returnAdmins(users) {
+        let admins = []
+        for (let i = 0; i < users.length; i++) {
+            if (users[i].isAdmin) {
+                admins.push(users[i].username);
+            }
+        }return admins
+    }
+console.log(returnAdmins(users))
+
+    // function returnAdmins(users) {
+    //     return users.filter(user => user.isAdmin);
+    // }
+    //
+    // const admins = returnAdmins(users);
+    // console.log(admins);
+
+    /*
+
+    returnAdmins(users) returns...
+
+    [
+
+        {
+            username: 'fred123',
+            password: 'letmein',
+            email: 'fred123@email.com',
+            isAdmin: true
+        },
+        {
+            username: 'kathy123',
+            password: 'letmein',
+            email: 'kathy123@email.com',
+            isAdmin: true
+        }
+    ]
+
+    */
+
+
 </script>
 
 </body>

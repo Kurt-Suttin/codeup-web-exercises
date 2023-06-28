@@ -6,6 +6,7 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css" integrity="sha512-ZnR2wlLbSbr8/c9AgLg3jQPAattCUImNsae6NHYnS9KrIwRdcY9DxFotXhNAKIKbAXlRnujIqUWoXXwqyFOeIQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
 
@@ -18,7 +19,6 @@
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">
-                <img src="images/pizza2.jpeg" alt="pizza" class="rounded-circle" width="50" height="54">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -49,15 +49,16 @@
                     </li>
                     <form class="d-flex" role="search">
                         <input class="form-control me-2" type="search" placeholder="Zip Code" aria-label="Search">
-                        <button class="btn btn-outline-primary search-font" type="submit">Search for stores near you
+                        <button class="btn btn-outline-primary search-font fw-semibold" type="submit">Search for stores near you
                         </button>
                     </form>
                 </ul>
                 <div class="d-flex justify-content-end">
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb p-3 bg-body-tertiary rounded-3">
-                            <li class="breadcrumb-item "><a href="#"><img src="images/pizzaclassics.jpeg" width="50"
-                                                                          height="50" class="rounded-circle"></a></li>
+                            <li class="breadcrumb-item "><a href="#">
+                                <i class="bi bi-person-fill"></i></a>
+                            </li>
                             <li class="breadcrumb-item"><a href="#">Sign up</a></li>
                         </ol>
                     </nav>
@@ -77,19 +78,19 @@
             <ul class="nav nav-tabs" id="myTab" role="tablist">
                 <li class="nav-item" role="presentation">
                     <button class="nav-link active" id="sizes-tab" data-bs-toggle="tab" data-bs-target="#sizes-tab-pane"
-                            type="button" role="tab" aria-controls="sizes-tab-pane" aria-selected="true">(1)Size and
+                            type="button" role="tab" aria-controls="sizes-tab-pane" aria-selected="true"><i class="bi bi-1-circle-fill"></i>Size and
                         Crust
                     </button>
                 </li>
                 <li class="nav-item" role="presentation">
                     <button class="nav-link" id="sauces-tab" data-bs-toggle="tab" data-bs-target="#sauces-tab-pane"
-                            type="button" role="tab" aria-controls="sauces-tab-pane" aria-selected="false">(2)Cheese
+                            type="button" role="tab" aria-controls="sauces-tab-pane" aria-selected="false"><i class="bi bi-2-circle-fill"></i>Cheese
                         and Sauce
                     </button>
                 </li>
                 <li class="nav-item" role="presentation">
                     <button class="nav-link" id="toppings-tab" data-bs-toggle="tab" data-bs-target="#toppings-tab-pane"
-                            type="button" role="tab" aria-controls="toppings-tab-pane" aria-selected="false">(3)
+                            type="button" role="tab" aria-controls="toppings-tab-pane" aria-selected="false"><i class="bi bi-3-circle-fill"></i>
                         Toppings
                     </button>
                 </li>
@@ -102,7 +103,7 @@
                     <div class="card">
                         <h5 class="card-header bg-primary text-light">Choose Size and Crust</h5>
                         <div class="card-body">
-                            <div class="card full-width border-white">
+                            <div class="card full-width">
                                 <div class="card-header">
                                     Hand Tossed
                                 </div>
@@ -125,111 +126,126 @@
                                         </div>
                                     </ul>
                                 </div>
-                                <div class="card" style="margin-top: 1.5rem;">
-                                    <div class="card-header">
-                                        Crispy Thin
-                                    </div>
-                                    <div class="card full-width list-select-padding" style="margin-bottom: 1.5rem;">
-                                        <ul class="list-group list-group-flush">
-                                            <li class="list-group-item">Thin enough for optimum crispy to crust</li>
-                                            <div class="form-check list-group-item">
-                                                <input class="form-check-input" type="radio" name="flexRadioDefault"
-                                                       id="flexRadioDefault4">
-                                                <label class="form-check-label" for="flexRadioDefault4">
-                                                    medium(12")
-                                                </label>
-                                            </div>
-                                            <div class="form-check list-group-item">
-                                                <input class="form-check-input" type="radio" name="flexRadioDefault"
-                                                       id="flexRadioDefault5">
-                                                <label class="form-check-label" for="flexRadioDefault5">
-                                                    Large(14")
-                                                </label>
-                                            </div>
-                                        </ul>
-                                        <div class="d-flex flex-row-reverse card-footer">
-                                            <a href="#" class="btn btn-primary">Next Step > </a>
+                            </div>
+
+                            <div class="card" style="margin-top: 1.5rem;">
+
+                                <div class="card-header">
+                                    Crispy Thin
+                                </div>
+                                <div class="card full-width list-select-padding">
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item">Thin enough for optimum crispy to crust</li>
+                                        <div class="form-check list-group-item">
+                                            <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                                   id="flexRadioDefault4">
+                                            <label class="form-check-label" for="flexRadioDefault4">
+                                                medium(12")
+                                            </label>
                                         </div>
-                                    </div>
+                                        <div class="form-check list-group-item">
+                                            <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                                   id="flexRadioDefault5">
+                                            <label class="form-check-label" for="flexRadioDefault5">
+                                                Large(14")
+                                            </label>
+                                        </div>
+                                    </ul>
+
+                                </div>
+                                <div class="d-flex flex-row-reverse card-footer">
+                                    <a href="#" class="btn btn-primary">Next Step <i class="bi bi-arrow-bar-right"></i> </a>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="tab-content" id="myTabContent">
-                <div class="tab-pane fade" id="sauces-tab-pane" role="tabpanel" aria-labelledby="sauces-tab"
-                     tabindex="0">
-                    <div class="card">
+        </div>
+        <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade" id="sauces-tab-pane" role="tabpanel" aria-labelledby="sauces-tab"
+                 tabindex="0">
+                <div class="card">
 
-                        <h5 class="card-header bg-primary text-light">Choose Cheese and Sauce</h5>
-                        <div class="card-body">
+                    <h5 class="card-header bg-primary text-light">Choose Cheese and Sauce</h5>
+                    <div class="card-body">
+
+                        <div class="card full-width">
+                            <div class="card-header">
+                                Cheese
+                            </div>
                             <div class="card full-width">
-                                <div class="card-header">
-                                    Cheese
-                                </div>
-                                <div class="card full-width">
-                                    <ul class="list-group list-group-flush gap-1">
+                                <ul class="list-group list-group-flush gap-1">
 
-                                        <li class="list-group-item">How much?</li>
+                                    <li class="list-group-item">How much?</li>
 
-                                        <div class="form-check list-group-item">
-                                            <select class="form-select" aria-label="Default select example">
-                                                <option selected>Normal</option>
-                                                <option value="1">Half</option>
-                                                <option value="2">Double</option>
-                                                <option value="3">None</option>
-                                            </select>
-                                        </div>
-                                    </ul>
-
-                                </div>
-                                <br>
-                                <div class="card-header rounded">
-                                    Sauce
-                                </div>
-                                <div class="card full-width list-select-padding">
-                                    <ul class="list-group list-group-flush">
-                                        <li class="list-group-item">What Type?</li>
-
-                                        <div class="form-check list-group-item">
-                                            <select class="form-select" aria-label="Default select example">
-                                                <option selected>Tomato</option>
-                                                <option value="1">BBQ</option>
-                                                <option value="2">Alfredo</option>
-                                                <option value="3">None</option>
-                                            </select>
-                                            <li class="list-group-item">How Much?</li>
-
-                                            <div class="form-check list-group-item">
-                                                <select class="form-select" aria-label="Default select example">
-                                                    <option selected>Normal</option>
-                                                    <option value="1">Half</option>
-                                                    <option value="2">Double</option>
-                                                    <option value="3">None</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                    </ul>
-                                    <div class="d-flex flex-row-reverse card-footer">
-                                        <a href="#" class="btn btn-primary gap-5">Next Step > </a>
-                                        <a href="#" class="btn btn-primary gap-5"> < Previous Step </a>
+                                    <div class="form-check list-group-item">
+                                        <select class="form-select" aria-label="Default select example">
+                                            <option selected>Normal</option>
+                                            <option value="1">Half</option>
+                                            <option value="2">Double</option>
+                                            <option value="3">None</option>
+                                        </select>
                                     </div>
-                                </div>
+                                </ul>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="tab-content" id="myTabContent">
+                    <div class="card-body">
+                        <div class="card full-width">
+                            <div class="card-header">
+                                Sauce
+                            </div>
+                            <div class="card full-width list-select-padding">
+                                <ul class="list-group list-group-flush gap-1">
+                                    <li class="list-group-item">What Type?</li>
 
-                    <div class="tab-pane fade" id="toppings-tab-pane" role="tabpanel" aria-labelledby="toppings-tab"
-                         tabindex="0">
-                        <div class="card">
-                            <div class="card-header bg-primary text-light"><h5>
-                                Choose Toppings
-                            </h5></div>
+                                    <div class="form-check list-group-item">
+                                        <select class="form-select" aria-label="Default select example">
+                                            <option selected>Tomato</option>
+                                            <option value="1">BBQ</option>
+                                            <option value="2">Alfredo</option>
+                                            <option value="3">None</option>
+                                        </select>
+                                    </div>
+                                </ul>
+                            </div>
+                            <div class="card full-width list-select-padding ">
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">How Much?</li>
+                                    <div class="form-check list-group-item">
+                                        <select class="form-select" aria-label="Default select example">
+                                            <option selected>Normal</option>
+                                            <option value="1">Half</option>
+                                            <option value="2">Double</option>
+                                            <option value="3">None</option>
+                                        </select>
+                                    </div>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="d-flex flex-row-reverse card-footer">
+                        <a href="#" class="btn btn-primary gap-5">Next Step<i class="bi bi-arrow-bar-right"></i> </a>
+                        <a href="#" class="btn btn-primary gap-5"> <i class="bi bi-arrow-bar-left"></i> Previous Step </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tab-content" id="myTabContent">
+
+            <div class="tab-pane fade" id="toppings-tab-pane" role="tabpanel" aria-labelledby="toppings-tab"
+                 tabindex="0">
+                <div class="card">
+
+                    <h5 class="card-header bg-primary text-light">Choose Toppings</h5>
+                    <div class="card-body">
+                        <div class="card full-width">
+                            <div class="card-header">
+                                Choose Meats
+                            </div>
                             <ul class="list-group list-group-flush list-select-padding">
-                                <li class="list-group-item card-header">Choose Meats</li>
                                 <div class="form-check list-group-item">
                                     <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
                                     <label class="form-check-label" for="flexCheckDefault">
@@ -255,9 +271,13 @@
                                     </label>
                                 </div>
                             </ul>
-                            <br>
+                        </div>
+                        <br>
+                        <div class="card full-width">
+                            <div class="card-header">
+                                Choose Non Meats
+                            </div>
                             <ul class="list-group list-group-flush list-select-padding">
-                                <li class="list-group-item card-header">Choose Non Meats</li>
                                 <div class="form-check list-group-item">
                                     <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
                                     <label class="form-check-label" for="flexCheckDefault">
@@ -283,13 +303,13 @@
                                     </label>
                                 </div>
                             </ul>
-                            <div class="card-footer">
-                                <div class="d-flex flex-row-reverse card-footer">
-                                    <a href="#" class="btn btn-primary">
-                                        <img src="images/cart-checkout.jpeg" alt="cart" class="cart rounded">
-                                        Check out </a>
-                                </div>
-                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <div class="d-flex flex-row-reverse">
+                            <a href="#" class="btn btn-primary">
+                                <i class="bi bi-cart-fill"></i>
+                                Check out </a>
                         </div>
                     </div>
                 </div>
