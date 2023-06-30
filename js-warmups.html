@@ -342,9 +342,11 @@
             if (users[i].isAdmin) {
                 admins.push(users[i].username);
             }
-        }return admins
+        }
+        return admins
     }
-console.log(returnAdmins(users))
+
+    // console.log(returnAdmins(users))
 
     // function returnAdmins(users) {
     //     return users.filter(user => user.isAdmin);
@@ -377,7 +379,7 @@ console.log(returnAdmins(users))
 
 
 
-// ================================= WARM UP
+    // ================================= WARM UP
 
     // Write a function that takes a neighborhood object
     // and determines if it is desirable. A neighborhood is desirable.
@@ -386,96 +388,138 @@ console.log(returnAdmins(users))
     // and the total rating of schools is at least 24.
     // The function should return true if the neighborhood object is desireable and false otherwise.
 
-// example data...
+    // example data...
 
-        const neighborhood1 = {
-        neighborhood: "Lovely Estates",
-        medianHomePrice: 280000,
-        pool: true,
-        tennis: false,
-        crimeRate: "low",
-        schools: 22
-    };
+    //     const neighborhood1 = {
+    //     neighborhood: "Lovely Estates",
+    //     medianHomePrice: 280000,
+    //     pool: true,
+    //     tennis: false,
+    //     crimeRate: "low",
+    //     schools: 22
+    // };
+    //
+    // const neighborhood2 = {
+    //     neighborhood: "Luminous Estates",
+    //     medianHomePrice: 270000,
+    //     pool: true,
+    //     tennis: false,
+    //     crimeRate: "high",
+    //     schools: 24
+    // }
+    //
+    // const neighborhood3 = {
+    //     neighborhood: "Oak Mountain",
+    //     medianHomePrice: 290000,
+    //     pool: false,
+    //     tennis: false,
+    //     crimeRate: "low",
+    //     schools: 24
+    // }
+    //
+    // const neighborhood4 = {
+    //     neighborhood: "Ginormous Acres",
+    //     medianHomePrice: 350000,
+    //     pool: true,
+    //     tennis: true,
+    //     crimeRate: "low",
+    //     schools: 27
+    // }
+    //
+    // function isNeighborhoodDesirable(neighborhood) {
+    //     if (
+    //         neighborhood.medianHomePrice < 300000 &&
+    //         neighborhood.crimeRate === 'low' &&
+    //         neighborhood.schools >= 24
+    //     ) {
+    //         console.log(true) ;
+    //     } else {
+    //         console.log(false);
+    //     }
+    // }
+    // isNeighborhoodDesirable(neighborhood1)
+    // function isNeighborhoodDesirable(neighborhood) {
+    //     if (
+    //         neighborhood.medianHomePrice < 300000 &&
+    //         neighborhood.crimeRate === 'low' &&
+    //         neighborhood.schools >= 24
+    //     ) {
+    //         console.log(true) ;
+    //     } else {
+    //         console.log(false);
+    //     }
+    // }
+    // isNeighborhoodDesirable(neighborhood2)
+    //
+    // function isNeighborhoodDesirable(neighborhood) {
+    //     if (
+    //         neighborhood.medianHomePrice < 300000 &&
+    //         neighborhood.crimeRate === 'low' &&
+    //         neighborhood.schools >= 24
+    //     ) {
+    //         console.log(true) ;
+    //     } else {
+    //         console.log(false);
+    //     }
+    // }
+    // isNeighborhoodDesirable(neighborhood3)
+    // function isNeighborhoodDesirable(neighborhood) {
+    //     if (
+    //         neighborhood.medianHomePrice < 300000 &&
+    //         neighborhood.crimeRate === 'low' &&
+    //         neighborhood.schools >= 24
+    //     ) {
+    //         console.log(true) ;
+    //     } else {
+    //         console.log(false);
+    //     }
+    // }
+    // isNeighborhoodDesirable(neighborhood4)
+    //
+    // ================================= WARM UP
+    //
+    //
+    // Write a function,
+    // returnLargestStudentCount,
+    // that takes in an array of classes returns the number of students in the largest class.
+    // Assume at least one class object will be present in the input array with students property set to a valid positive integer.
 
-    const neighborhood2 = {
-        neighborhood: "Luminous Estates",
-        medianHomePrice: 270000,
-        pool: true,
-        tennis: false,
-        crimeRate: "high",
-        schools: 24
-    }
+    let classes = [
+        {class: "6th grade history", students: 18},
+        {class: "7th grade history", students: 20},
+        {class: "8th grade history", students: 22},
+        {class: "4th grade history", students: 30},
+        {class: "10th grade history", students: 25}
+    ];
 
-    const neighborhood3 = {
-        neighborhood: "Oak Mountain",
-        medianHomePrice: 290000,
-        pool: false,
-        tennis: false,
-        crimeRate: "low",
-        schools: 24
-    }
 
-    const neighborhood4 = {
-        neighborhood: "Ginormous Acres",
-        medianHomePrice: 350000,
-        pool: true,
-        tennis: true,
-        crimeRate: "low",
-        schools: 27
-    }
+    // returnLargestStudentCount(classes) // returns 30
+    let max = 0
+    // console.log(classes);
 
-    function isNeighborhoodDesirable(neighborhood) {
-        if (
-            neighborhood.medianHomePrice < 300000 &&
-            neighborhood.crimeRate === 'low' &&
-            neighborhood.schools >= 24
-        ) {
-            console.log(true) ;
-        } else {
-            console.log(false);
+    function returnLargestStudentCount(classes) {
+        for (let i = 0; i < classes.length; i += 1) {
+        // console.log(classes[i]);
+            if (max < classes[i].students){
+                max = classes[i].students;
+            }
         }
-    }
-    isNeighborhoodDesirable(neighborhood1)
-    function isNeighborhoodDesirable(neighborhood) {
-        if (
-            neighborhood.medianHomePrice < 300000 &&
-            neighborhood.crimeRate === 'low' &&
-            neighborhood.schools >= 24
-        ) {
-            console.log(true) ;
-        } else {
-            console.log(false);
-        }
-    }
-    isNeighborhoodDesirable(neighborhood2)
+        return max;
 
-    function isNeighborhoodDesirable(neighborhood) {
-        if (
-            neighborhood.medianHomePrice < 300000 &&
-            neighborhood.crimeRate === 'low' &&
-            neighborhood.schools >= 24
-        ) {
-            console.log(true) ;
-        } else {
-            console.log(false);
-        }
     }
-    isNeighborhoodDesirable(neighborhood3)
-    function isNeighborhoodDesirable(neighborhood) {
-        if (
-            neighborhood.medianHomePrice < 300000 &&
-            neighborhood.crimeRate === 'low' &&
-            neighborhood.schools >= 24
-        ) {
-            console.log(true) ;
-        } else {
-            console.log(false);
-        }
-    }
-    isNeighborhoodDesirable(neighborhood4)
+
+    console.log(returnLargestStudentCount(classes));
 
 
+    // console.log(returnLargestStudentCount());
 
+
+    // for (let j = 0; j < classes.length; j++){
+    //     console.log(classes[j]);
+    //
+    //
+    //
+    // }
 
 
 </script>
