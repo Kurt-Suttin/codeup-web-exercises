@@ -26,7 +26,7 @@ function startCountdown() {
     if (counter === 0) {
         clearInterval(timer); // Stop the timer
         alert("Countdown is finished!"); // Show a message or perform any other action
-        location.reload(); // Reload the page
+        location.reload(); // Reload the page to fix any bugs
     }
 }
 
