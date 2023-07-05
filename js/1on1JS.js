@@ -66,17 +66,17 @@ let result = "";
 // console.log(result);
 
 // fizzBuzz
-// for (let x = 0; x <= 100; x++) {
-//     if (x % 15 === 0) {
-//         console.log('Fizzbuzz')
-//     } else if (x % 5 === 0) {
-//         console.log('Buzz')
-//     } else if (x % 3 === 0) {
-//         console.log('Fizz')
-//     } else {
-//         console.log(x)
-//     }
-// }
+for (let x = 0; x <= 100; x++) {
+    if (x % 15 === 0) {
+        console.log('Fizzbuzz')
+    } else if (x % 5 === 0) {
+        console.log('Buzz')
+    } else if (x % 3 === 0) {
+        console.log('Fizz')
+    } else {
+        console.log(x)
+    }
+}
 
 //Exercise 1: Print Numbers
 // Write a loop that prints numbers from 1 to 10.
