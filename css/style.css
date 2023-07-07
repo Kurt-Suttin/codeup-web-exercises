@@ -215,3 +215,12 @@ td > img:hover {
     width: 600px;
     transition: 1.5s;
 }
+.ghost{
+    width: 100px;
+    aspect-ratio: 1/1;
+
+}
+.ghost:hover{
+    width: 150px;
+    transition: 5s;
+}
