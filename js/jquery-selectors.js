@@ -12,6 +12,8 @@
 // use jQuery to select all 'li' elements
 
 $('li').css('font-size','20px');
+$("h1, p, li").css("background-color", "yellow");
+
 
 
 // use j query to select multiple selectors
