@@ -7,14 +7,15 @@
     <link rel="stylesheet" href="css/layout.css">
     <link rel="stylesheet" href="css/konami.css">
 </head>
-<body id="easter-egg" class="background page-wrapper">
+<body id="easter-egg sound" class="background page-wrapper">
 
-<div class="container container-border rainbow-shadow">
+<div class="container container-border rainbow-shadow margin">
     <div class="row">
         <div class="column justify-center align-center">
             <h1 class="text-color "> Type in the Konami Code</h1>
 
             <p class="text-color">['up', 'up', 'down', 'down', 'left', 'right', 'left', 'right', 'b', 'a'];</p>
+            <p class="text-color"> then press enter</p>
         </div>
     </div>
     <div class="column justify-center align-center">
@@ -41,10 +42,11 @@
         39: 'right',
         40: 'down',
         65: 'a',
-        66: 'b'
+        66: 'b',
+        13: 'enter'
     };
     // the 'official' Konami Code sequence
-    let konamiCode = ['up', 'up', 'down', 'down', 'left', 'right', 'left', 'right', 'b', 'a'];
+    let konamiCode = ['up', 'up', 'down', 'down', 'left', 'right', 'left', 'right', 'b', 'a','enter'];
 
     // a variable to remember the 'position' the user has reached so far.
     let konamiCodePosition = 0;
@@ -76,6 +78,8 @@
         document.body.style.backgroundImage = "url('img')";
         $easteregg.css('background-color', 'pink');
         $cofetti.css('opacity', '100%')
+        let sound = new Audio('audio/grunt.mp3');
+        sound.play();
         console.log("cheats activated")
     }
 
