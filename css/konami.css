@@ -1,0 +1,12 @@
+.background{
+    background-color: black;
+}
+.text-color{
+    color: white;
+    font-size: 3em;
+}
+.confetti{
+    opacity: 0;
+    width: 40em;
+    aspect-ratio: 1/1;
+}

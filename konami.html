@@ -5,18 +5,33 @@
 
     <title>Konami Code</title>
     <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/konami.css">
 </head>
-<body id="easter-egg">
+<body id="easter-egg" class="background page-wrapper">
 
 <div class="container">
     <div class="row">
         <div class="column justify-center align-center">
-            <h1> Type in Konami Code</h1>
-            
-        ['up', 'up', 'down', 'down', 'left', 'right', 'left', 'right', 'b', 'a'];
+            <h1 class="text-color"> Type in the Konami Code</h1>
+
+       <p class="text-color">['up', 'up', 'down', 'down', 'left', 'right', 'left', 'right', 'b', 'a'];</p>
         </div>
     </div>
+    <div class="column justify-center align-center">
+    <img src="images/party-popper-confetti.gif" alt="confetti" class="confetti">
+
+    </div>
+
 </div>
+
+
+
+
+
+
+
+
+
 
 
 <script src="https://code.jquery.com/jquery-3.7.0.min.js"
@@ -27,6 +42,7 @@
     // variables declared
 
     let $easteregg = $("#easter-egg");
+    let $cofetti = $(".confetti")
 
 
     const allowedKeys = {
@@ -69,6 +85,8 @@
     function activateCheats() {
         document.body.style.backgroundImage = "url('img')";
         $easteregg.css('background-color', 'pink');
+        $cofetti.css('opacity','100%')
+
         console.log("cheats activated")
     }
 
