@@ -1,5 +1,11 @@
 "use strict"
 
+// add link with jquery
+$('body').prepend(
+    '<a href="#">Toggle Invisible Class</a>'
+)
+
+
 // DD function
 $('a').click(function (event) {
     $('dd').toggleClass('invisible');
