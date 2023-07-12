@@ -21,23 +21,86 @@ $("dt").on("click", function (e) {
 
 ////
 // With JavaScript
+//
+// const toggleVisibilityLink = document.createElement('a');
+// toggleVisibilityLink.innerText = 'Toggle Visibility';
+//
+// const bodyElement = document.querySelector('body');
+// bodyElement.appendChild(toggleVisibilityLink);
 
-const toggleVisibilityLink = document.createElement('a');
-toggleVisibilityLink.innerText = 'Toggle Visibility';
+// const ddElements = document.querySelectorAll('dd');
+// toggleVisibilityLink.addEventListener('click', () => {
+//     ddElements.forEach((ddElement) => {
+//         ddElement.classList.toggle('invisible');
+//     });
+// });
+//
+// const dtElements = document.querySelectorAll('dt');
+// dtElements.forEach((dtElement) => {
+//     dtElement.addEventListener('click', () => {
+//         dtElement.classList.toggle('highlighted');
+//     });
+// });
+//////
+// Jquery
 
-const bodyElement = document.querySelector('body');
-bodyElement.appendChild(toggleVisibilityLink);
+//Create a button,
+// when clicked,
+// make last li in each ul
+// have yellow background.
 
-const ddElements = document.querySelectorAll('dd');
-toggleVisibilityLink.addEventListener('click', () => {
-    ddElements.forEach((ddElement) => {
-        ddElement.classList.toggle('invisible');
+// $('button').click(function (event) {
+//     $('li').each(function (index) {
+//         if (index === 4 || index === 9 || index === 14) {
+//             $(this).css('background-color', '#FF0');
+//         }
+//     });
+//
+//
+// });
+
+
+//Create a button,
+// when clicked,
+// make last li in each ul
+// have yellow background.
+
+$('button').click(function() {
+    $('ul').each(function () {
+        $(this).children('li:last').css('background-color', 'yellow');
     });
 });
 
-const dtElements = document.querySelectorAll('dt');
-dtElements.forEach((dtElement) => {
-    dtElement.addEventListener('click', () => {
-        dtElement.classList.toggle('highlighted');
-    });
+
+
+
+// When any h3 is clicked,
+// the ('li')'s underneath it should be bolded.
+// Use font-weight: bold
+
+
+$('h3').click(function (e) {
+    $('li').css('font-weight', 'bold');
 });
+
+
+// $('li').click(function (e){
+//     $('ul').children().first('li').css('color','blue')
+// });
+
+$('li').click(function() {
+    // Find the parent ul element
+    const parentUl = $(this).parent('ul');
+
+    // Select the first li element within the parent ul
+    const firstLi = parentUl.children('li:first');
+
+    // Apply CSS to change the font color to blue
+    firstLi.css('color', 'blue');
+});
+// any list item
+// is clicked
+// first li of the parent ul
+// have a color: blue.
+
+
