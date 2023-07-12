@@ -49,46 +49,28 @@ $("dt").on("click", function (e) {
 // make last li in each ul
 // have yellow background.
 
-// $('button').click(function (event) {
-//     $('li').each(function (index) {
-//         if (index === 4 || index === 9 || index === 14) {
-//             $(this).css('background-color', '#FF0');
-//         }
-//     });
-//
-//
-// });
-
-
-//Create a button,
-// when clicked,
-// make last li in each ul
-// have yellow background.
-
-$('button').click(function() {
+$('.change-park').click(function () {
     $('ul').each(function () {
         $(this).children('li:last').css('background-color', 'yellow');
     });
 });
-
-
-
 
 // When any h3 is clicked,
 // the ('li')'s underneath it should be bolded.
 // Use font-weight: bold
 
 
-$('h3').click(function (e) {
-    $('li').css('font-weight', 'bold');
+$('h3').on('click', function () {
+    $(this).next().find('li').css('font-weight', 'bold');
 });
 
 
-// $('li').click(function (e){
-//     $('ul').children().first('li').css('color','blue')
-// });
+// any list item
+// is clicked
+// first li of the parent ul
+// have a color: blue.
 
-$('li').click(function() {
+$('li').click(function () {
     // Find the parent ul element
     const parentUl = $(this).parent('ul');
 
@@ -98,9 +80,5 @@ $('li').click(function() {
     // Apply CSS to change the font color to blue
     firstLi.css('color', 'blue');
 });
-// any list item
-// is clicked
-// first li of the parent ul
-// have a color: blue.
 
 
