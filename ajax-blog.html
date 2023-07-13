@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ajax Blog</title>
+</head>
+<body>
+<h1>Blog</h1>
+<div id="posts">
+
+</div>
+
+
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"
+        integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+<script>
+    (function () {
+        "use strict";
+        // Post request
+        console.log("before response");
+        $.ajax('data/blog.json').done((response) => {
+            console.log(response);
+            console.log("Response received");
+            renderBlog(response);
+
+        });
+        console.log("Response received");
+
+
+        // Functions
+//         function postBlog(){
+//
+//
+//             $('#posts').append(`
+// content
+//             `)
+//         }
+
+
+        function renderBlog(blog) {
+            // start up loop
+            for (let i = 0; i < blog.length; i++) {
+                // adds table data
+                $('#posts').append(`
+                <p>Title : ${blog[i].title}</p>
+                <p>Content : ${blog[i].content}</p>
+                <p> Categories : ${blog[i].categories}</p>
+                `)
+
+            }
+        }
+
+
+        })();
+</script>
+</body>
+</html>
