@@ -73,11 +73,8 @@ $('h3').on('click', function () {
 $('li').click(function () {
     // Find the parent ul element
     const parentUl = $(this).parent('ul');
-
     // Select the first li element within the parent ul
     const firstLi = parentUl.children('li:first');
-
-    // Apply CSS to change the font color to blue
     firstLi.css('color', 'blue');
 });
 
