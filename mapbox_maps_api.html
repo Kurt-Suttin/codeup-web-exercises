@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <script src="js/keys.js"></script>
+    <script src="js/mapbox-geocoder-utils.js"></script>
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.10.0/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.10.0/mapbox-gl.css' rel='stylesheet'/>
+    <style>
+        #map {
+            /* the width and height may be set to any size */
+            width: 20rem;
+            height: 20rem;
+        }
+    </style>
+    <title>MapBox Maps API</title>
+</head>
+<body>
+
+
+<!-- The HTML element that serves as the Mapbox container -->
+<div id='map'></div>
+
+<!--Generate a map that shows the city with your favorite restaurant using geocoding.-->
+
+<button id="geocode-button">Go To Favorite Restaurant</button>
+
+<!--Redraw the map of the above location at zoom levels 5, 15, and 20. -->
+
+<!--Do this by simply changing the value of zoom level-->
+
+<!--where the map properties are initially set and refresh the page to see the changes. -->
+
+<!--Can the zoom be changed programmatically after the initial map is drawn?-->
+
+
+<button id="reverse-geocode-button">Show Address</button>
+
+
+
+<button id="mark-restaurant">mark the restaurant</button>
+<h2>Address :</h2>
+<h2>_____________________</h2>
+<h1></h1>
+<h2>_____________________</h2>
+<script src="https://code.jquery.com/jquery-3.7.0.min.js"
+        integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+<script src="js/mapbox-maps-api.js"></script>
+
+</body>
+</html>
