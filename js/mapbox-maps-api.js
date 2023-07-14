@@ -103,5 +103,15 @@ $(() => {
     }
     ];
 
-restaurants.forEach(restaurant )
+    restaurants.forEach(restaurant => {
+        geocode(restaurant.address, MAPBOX_TOKEN).then((data) => {
+            const alamoPopup = new mapboxgl.Popup()
+                .setHTML(`<p>${restaurant.title}</p>`);
+            const alamoMarker = new mapboxgl.Marker()
+                .setLngLat(data)
+                .addTo(map)
+                .setPopup(alamoPopup);
+
+        })
+    })
 });
