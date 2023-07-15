@@ -27,8 +27,27 @@
 <div id='map' style='width: 400px; height: 300px;'></div>
 
 
+<div id='weather' style='width: 400px; height: 300px;'>
 
-<div id='weather' style='width: 400px; height: 300px;'></div>
+    <table>
+        <thead>
+        <tr>
+            <th>Date</th>
+            <th>Max</th>
+            <th>Min</th>
+            <th>City</th>
+        </tr>
+        </thead>
+        <tbody id="insert-conditions">
+
+        </tbody>
+    </table>
+
+</div>
+
+
+
+
 
 
 <!-- used to import minMaxTemps function -->
@@ -87,36 +106,62 @@
     // TODO: log the humidity for all days
     // 8 because 7 days in a week
 
-    // $.ajax(getWeatherURL(...ALAMO_COORDINATES))
-    //     .done((data) => {
-    //
-    //         data.list.forEach((day, index) => {
-    //             if (index % 8 === 0) {
-    //                 console.log(day.main.humidity);
-    //             }
-    //         });
-    //
-    //         // OR
-    //
-    //         for (let i = 0; i < data.list.length; i += 8) {
-    //             console.log(data.list[i].main.humidity);
-    //         }
-    //
-    //     })
-    //     .fail(console.error);
+    $.ajax(getWeatherURL(...ALAMO_COORDINATES))
+        .done((data) => {
+
+            data.list.forEach((day, index) => {
+                if (index % 8 === 0) {
+                    console.log(day.main.humidity);
+                }
+            });
+
+            // OR
+
+            for (let i = 0; i < data.list.length; i += 8) {
+                console.log(data.list[i].main.humidity);
+            }
+
+        })
+        .fail(console.error);
 
 
     // TODO: log the min and max temp for each day
 
-    // $.ajax(getWeatherURL(...ALAMO_COORDINATES))
-    //     .done(data => {
-    //         console.log(data);
-    //         const minMaxTemps = returnMinMaxTemps(data);
-    //         minMaxTemps.forEach(minMaxTemp => {
-    //             console.log(minMaxTemp);
-    //         });
-    //     })
-    //     .fail(console.error);
+    $.ajax(getWeatherURL(...ALAMO_COORDINATES))
+        .done(data => {
+            console.log(data);
+            const minMaxTemps = returnMinMaxTemps(data);
+            minMaxTemps.forEach(minMaxTemp => {
+                console.log(minMaxTemp);
+            });
+        })
+        .fail(console.error);
+
+    ///
+    $.ajax('https://api.openweathermap.org/data/2.5/forecast').done((response) => {
+        console.log(response);
+        console.log("Response received");
+        renderWeather(response)
+
+    });
+
+    function renderWeather(WeatherDataArray) {
+        // clear render for refresh
+        $('#insert-conditions').empty()
+        // start up loop
+        for (let i = 0; i < WeatherDataArray.length; i++) {
+            // adds table data
+            $('#insert-conditions').append(`
+              <tr>
+                <td>${WeatherDataArray[i].date}</td>
+                <td>${WeatherDataArray[i].max}</td>
+                <td>${WeatherDataArray[i].min}</td>
+                <td>${WeatherDataArray[i].city}</td>
+              </tr>
+                `)
+
+        }
+    }
 
 </script>
 </body>
