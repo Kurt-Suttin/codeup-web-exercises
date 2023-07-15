@@ -35,9 +35,11 @@ function returnMinMaxTemps({list}) {
         }
     });
 
+
     return minMaxTempDays;
 }
 
+console.log(returnMinMaxTemps);
 /*
     EXAMPLE OF USAGE:
 
