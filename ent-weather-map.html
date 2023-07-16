@@ -21,9 +21,12 @@
 <body>
 
 <h1>Open Weather API Project</h1>
-<p>See console...</p>
-
-
+<form onsubmit="preventDefault();" class="search-form">
+    <label for="search" class="screen-reader-text">Search</label>
+    <input id="search"
+           type="search" class="search-input" placeholder="City, State or Zip Code">
+    <button class="search-button">Search</button>
+</form>
 <div id='map' style='width: 400px; height: 300px;'></div>
 
 
@@ -44,10 +47,6 @@
     </table>
 
 </div>
-
-
-
-
 
 
 <!-- used to import minMaxTemps function -->
@@ -146,8 +145,6 @@
     });
 
     function renderWeather(WeatherDataArray) {
-        // clear render for refresh
-        $('#insert-conditions').empty()
         // start up loop
         for (let i = 0; i < WeatherDataArray.length; i++) {
             // adds table data
@@ -159,9 +156,9 @@
                 <td>${WeatherDataArray[i].city}</td>
               </tr>
                 `)
-
         }
-    }
+    };
+
 
 </script>
 </body>
