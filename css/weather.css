@@ -1,0 +1,58 @@
+.color1 {
+    color: #12090d;
+}
+
+.color2 {
+    color: #342a46;
+}
+
+.color3 {
+    color: #6e5d95;
+}
+
+.color4 {
+    color: #b499e9;
+}
+
+.color5 {
+    color: #f6ceed;
+}
+.color6{
+    color: #fe7d1e;
+}
+
+.backGroundColor1 {
+    background-color: #12090d;
+}
+
+.backGroundColor2 {
+    background-color: #342a46;
+}
+
+.backGroundColor3 {
+    background-color: #6e5d95;
+}
+
+.backGroundColor4 {
+    background-color:  #b499e9;
+}
+.backGroundColor6 {
+    background-color:   #fe7d1e;
+}
+
+
+
+.map-border {
+    /*background-color: #b499e9;*/
+    border: #12090d 2px solid;
+}
+
+.padding-5 {
+    padding-bottom: 5px;
+}
+.w-100{
+    width: 100%;
+}
+.weather-icon{
+    width: 25px;
+}

@@ -3,163 +3,69 @@
 <head>
     <meta charset="UTF-8">
 
-    <script src='https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js'></script>
     <link href='https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.css' rel='stylesheet'/>
-    <script src="js/keys.js"></script>
-    <script src="js/mapbox-geocoder-utils.js"></script>
-
-    <title>Open Weather Forecast API Example</title>
-
-</head>
-<body>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/weather.css">
     <title>Open Weather Forecast API Example</title>
 </head>
-<body>
-
-<h1>Open Weather API Project</h1>
-<form onsubmit="preventDefault();" class="search-form">
-    <label for="search" class="screen-reader-text">Search</label>
-    <input id="search"
-           type="search" class="search-input" placeholder="City, State or Zip Code">
-    <button class="search-button">Search</button>
-</form>
-<div id='map' style='width: 400px; height: 300px;'></div>
+<body class="backGroundColor1">
+<div class="page-wrapper">
+    <div class="container backGroundColor3 color5">
+        <div class="row">
+            <div class="column backGroundColor4 map-border ">
+                <h1>Open Weather API Project</h1>
 
 
-<div id='weather' style='width: 400px; height: 300px;'>
+                <form class="search-form">
+                    <label for="search" class="screen-reader-text">Search</label>
+                    <input id="search"
+                           type="search" class="search-input" placeholder="City, State or Zip Code">
+                    <button id="search-btn" class="search-button">Search</button>
+                </form>
 
-    <table>
-        <thead>
-        <tr>
-            <th>Date</th>
-            <th>Max</th>
-            <th>Min</th>
-            <th>City</th>
-        </tr>
-        </thead>
-        <tbody id="insert-conditions">
 
-        </tbody>
-    </table>
+                <div id='map' style='width: 550px; height: 400px;' class="map-border"></div>
 
+            </div>
+
+            <div class="column backGroundColor4 map-border ">
+
+                <!--                <div  style='width: 400px; height: 300px;' class="map-border"></div>-->
+
+                <div id='weather' class="color4">
+
+                    <table class="w-100 map-border backGroundColor2">
+                        <thead>
+                        <tr class="padding-5">
+                            <th class="map-border">Date</th>
+                            <th class="map-border">Forecast</th>
+                            <th class="map-border">Humidity</th>
+                            <th class="map-border">Temp</th>
+                            <th></th>
+                        </tr>
+                        </thead>
+                        <tbody id="insert-conditions" class="map-border">
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 
-
-<!-- used to import minMaxTemps function -->
-<script src="js/min-max-temps.js"></script>
-
+<script src="js/keys.js"></script>
 <!-- include jQuery -->
 <script src="https://code.jquery.com/jquery-3.7.0.min.js"
         integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+<script src='https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js'></script>
+<script src="js/mapbox-geocoder-utils.js"></script>
+<script src="js/min-max-temps.js"></script>
 
 
 <!-- additional code here -->
-
 <script src="js/ent-weather-map.js"></script>
 
 
-<script>
-    "use strict";
-
-    // Base URL for forecast API
-    const OPEN_WEATHER_URL = 'https://api.openweathermap.org/data/2.5/forecast';
-
-    let myUrl = 'https://api.openweathermap.org/data/2.5/forecast'
-
-    // Simple way to create URL for request based on coordinates
-    function getWeatherURL(lat, lon) {
-        return `${OPEN_WEATHER_URL}?lat=${lat}&lon=${lon}&units=imperial&appid=${OPEN_WEATHER_APPID}`;
-    }
-
-    const ALAMO_COORDINATES = ['29.4260', '-98.4861'];
-
-    // TODO: log URL
-
-    // console.log(getWeatherURL(ALAMO_COORDINATES[0], ALAMO_COORDINATES[1]));
-
-    const URL = getWeatherURL(...ALAMO_COORDINATES);
-
-    // TODO: log full response from API
-
-    $.ajax(URL).done(data => {
-        console.log(data);
-    }).fail(console.error);
-
-
-    // TODO: log various parts of the API
-
-    $.ajax(URL).done(data => {
-        // TODO: log the city name
-        console.log(data.city.name);
-        // TODO: log the first three-hour forecast block
-        console.log(data.list[0]);
-        // TODO: log the humidity for the first three-hour block
-        console.log(data.list[0].main.humidity);
-    }).fail(console.error);
-
-
-    // TODO: log the humidity for all days
-    // 8 because 7 days in a week
-
-    $.ajax(getWeatherURL(...ALAMO_COORDINATES))
-        .done((data) => {
-
-            data.list.forEach((day, index) => {
-                if (index % 8 === 0) {
-                    console.log(day.main.humidity);
-                }
-            });
-
-            // OR
-
-            for (let i = 0; i < data.list.length; i += 8) {
-                console.log(data.list[i].main.humidity);
-            }
-
-        })
-        .fail(console.error);
-
-
-    // TODO: log the min and max temp for each day
-
-    $.ajax(getWeatherURL(...ALAMO_COORDINATES))
-        .done(data => {
-            console.log(data);
-            const minMaxTemps = returnMinMaxTemps(data);
-            minMaxTemps.forEach(minMaxTemp => {
-                console.log(minMaxTemp);
-            });
-        })
-        .fail(console.error);
-
-    ///
-    $.ajax('https://api.openweathermap.org/data/2.5/forecast').done((response) => {
-        console.log(response);
-        console.log("Response received");
-        renderWeather(response)
-
-    });
-
-    function renderWeather(WeatherDataArray) {
-        // start up loop
-        for (let i = 0; i < WeatherDataArray.length; i++) {
-            // adds table data
-            $('#insert-conditions').append(`
-              <tr>
-                <td>${WeatherDataArray[i].date}</td>
-                <td>${WeatherDataArray[i].max}</td>
-                <td>${WeatherDataArray[i].min}</td>
-                <td>${WeatherDataArray[i].city}</td>
-              </tr>
-                `)
-        }
-    };
-
-
-</script>
 </body>
 </html>
