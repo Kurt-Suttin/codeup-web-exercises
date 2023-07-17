@@ -104,6 +104,7 @@ $.ajax(URL).done((response) => {
 });
 
 function renderWeather(WeatherDataArray) {
+    console.log(WeatherDataArray);
     const $tblBody = $('#insert-conditions');
     $tblBody.html("")
     // start up loop
@@ -128,9 +129,20 @@ function renderWeather(WeatherDataArray) {
 //// input search function
 
 
-
+//
 let searchBtn = document.querySelector('.search-form');
 searchBtn.addEventListener('submit', function (e) {
+    // Grab the input from the input field (.value)
+
+    // geocode(inputValue, MAPBOX_TOKEN)
+    //     .then((data) => {
+    //         map.setCenter(data);
+    // pass the city to a function that will grab the gecode
+
+
+    // update marker
+    // createMarker([[-98.4916, 29.4260]])
+
     e.preventDefault();
     console.log('search btn clicked')
     searchWeather(map)
@@ -144,8 +156,57 @@ function searchWeather(map) {
             let newURL = getWeatherURL(data[1], data[0]);
             $.ajax(newURL).done(data => {
                 renderWeather(data.list);
+                console.log(data)
+                // createMarker(data)
             }).fail(console.error);
         })
 }
 
+/// marker function
+const marker = new mapboxgl.Marker ({
+    draggable : true
+})
+.setLngLat([-98.4916, 29.4260])
+    .addTo(map);
 
+
+function createMarker(arr) {
+    return new mapboxgl.Marker()
+        .setLngLat(arr)
+        .addTo(map);
+}
+
+// Set an event listener
+marker.on('dragend', (e) => {
+    console.log(`A click event has occurred at ${e.lngLat}`);
+    console.log(e.target._lngLat)
+    const lng = e.target._lngLat.lng;
+    const lat = e.target._lngLat.lat;
+    const coors ={lng,lat}
+    const newUrl = getWeatherURL(lat, lng)
+    $.ajax(newUrl).done(data => {
+        renderWeather(data.list)
+        // createMarker.setLngLat([lng,lat])
+    })
+
+
+
+    // call function to create marker at specific lng and lat
+
+    // renderWeather(lat, lon)
+});
+
+
+
+// const buttonElem = document.querySelector('#search-btn');
+//
+// buttonElem.addEventListener("click", function (){
+//     // Grab the input info from the input field
+//     const inputValue = document.querySelector("search-input").value;
+//
+//
+//     // Either call a function that will fetch the lat and long of that city
+//
+//     // update the marker with the lat and long
+//
+// })
