@@ -110,17 +110,17 @@ function renderWeather(WeatherDataArray) {
        
               <tr>
               
-                <td>${WeatherDataArray[i].dt_txt}</td>
+                <td class="map-border">${WeatherDataArray[i].dt_txt}</td>
                 
-                <td> <!--gets icon from url and loops through json -->
+                <td class="map-border"> <!--gets icon from url and loops through json -->
                     <img src="https://openweathermap.org/img/wn/${WeatherDataArray[i].weather[0].icon}@2x.png" class="weather-icon">
                     ${WeatherDataArray[i].weather[0].description}
                 </td>
               
-                <td>${WeatherDataArray[i].main.humidity}</td>
-                <td>${WeatherDataArray[i].main.temp}</td>
+                <td class="map-border">${WeatherDataArray[i].main.humidity}%</td>
+                <td class="map-border">${WeatherDataArray[i].main.temp}°F</td>
                 
-              </tr>
+              </tr >
                 `)
     }
 };

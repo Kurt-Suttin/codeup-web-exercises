@@ -4,6 +4,9 @@
 <head>
 
     <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
 
     <link href='https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.css' rel='stylesheet'/>
 
@@ -11,52 +14,57 @@
 
     <link rel="stylesheet" href="css/weather.css">
 
-    <title>Open Weather Forecast API Example</title>
+    <title>Open Weather Forecast </title>
 
 </head>
 
-<body class="backGroundColor1">
-<div class="page-wrapper">
-    <div class="container backGroundColor3 color5">
+<body class="backGroundIMG backGroundColor1">
+<div class="page-wrapper ">
+    <div class="container color5">
         <div class="row">
+            <!--            <div class="column map-border">-->
             <div class="column backGroundColor4 map-border">
-                <h1>Open Weather API Project</h1>
+                <div class="justify-center text-align-center">
+                    <h1>Open Weather API Project</h1>
+                    <h2>Brought to you by Kurt Suttin</h2>
+                    <h2>Used with Mapbox & OpenWeather APIs</h2>
 
-                <!-- form START -->
+                    <!-- form START -->
 
-                <form class="search-form">
-                    <label for="search" class="screen-reader-text">Search</label>
-                    <input id="search"
-                           type="search" class="search-input" placeholder="City, State or Zip Code">
-                    <button id="search-btn" class="search-button">Search</button>
-                </form>
-
+                    <form class="search-form">
+                        <label for="search" class="screen-reader-text">Search</label>
+                        <input id="search"
+                               type="search" class="search-input search-box search-font"
+                               placeholder="City, State or Zip Code">
+                        <button id="search-btn" class="search-font search-button">Search</button>
+                    </form>
+                </div>
                 <!-- form END -->
                 <!-- map START -->
-                <div id='map' style='width: 550px; height: 400px;' class="map-border"></div>
+                <div id='map' style='width: 70rem; height:19rem;' class="map-border"></div>
                 <!-- map END -->
-            </div>
+                <!--            </div>-->
 
-            <div class="column backGroundColor4 map-border ">
+                <div class="column backGroundColor4 map-border">
+                    <!-- weather START -->
+                    <div id='weather' class="color4">
 
-                <!-- weather START -->
-                <div id='weather' class="color4">
-
-                    <table class="w-100 map-border backGroundColor2">
-                        <thead>
-                            <tr class="padding-5">
+                        <table class="w-100 map-border backGroundColor2">
+                            <thead>
+                            <tr class="">
                                 <th class="map-border">Date & Time</th>
                                 <th class="map-border">Forecast</th>
                                 <th class="map-border">Humidity</th>
-                                <th class="map-border">Temp</th>
-                                <th></th>
+                                <th class="map-border">Temperature</th>
+
                             </tr>
-                        </thead>
+                            </thead>
 
-                        <tbody id="insert-conditions" class="map-border">
+                            <tbody id="insert-conditions" class="map-border">
 
-                        </tbody>
-                    </table>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
                 <!-- weather END -->
             </div>
