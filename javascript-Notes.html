@@ -1,10 +1,116 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
-</html>
+
+<script>
+function lowerCase(input) {
+return typeof input === "string" ? input.toLowerCase() : false
+// if (typeof input === "string")
+//     return input.toLowerCase()
+// else {
+//     return false
+// }
+}
+
+function isAllLowerCase(input) {
+return input === String(input).toLowerCase()
+}
+
+function isAllUpperCase(input) {
+return input === String(input).toUpperCase()
+}
+
+function isNotPalindrome(input) {
+if (input === undefined || input === null) {
+return true;
+}
+
+if (typeof input !== 'string') {
+input = String(input);
+}
+
+input = input.toLowerCase();
+
+return input !== input.split('').reverse().join('');
+}
+
+
+function multiplyBy2(input) {
+if (typeof input === 'string') {
+input = parseFloat(input);
+}
+
+if (typeof input !== 'number' || isNaN(input)) {
+return false;
+}
+
+return input * 2;
+}
+
+function convertHourToSec(input) {
+if (typeof input === 'string') {
+input = parseFloat(input);
+}
+if (typeof input !== 'number' || isNaN(input) || input < 0) {
+return false;
+}
+return input * 60 * 60
+}
+
+function getLowestNumber(num1, num2, num3) {
+if (
+isNaN(parseFloat(num1)) ||
+isNaN(parseFloat(num2)) ||
+isNaN(parseFloat(num3))
+) {
+return false;
+}
+num1 = parseFloat(num1);
+num2 = parseFloat(num2);
+num3 = parseFloat(num3);
+return Math.min(num1, num2, num3);
+}
+
+
+function addStringLengths(str1, str2) {
+if (typeof str1 === 'undefined' || typeof str2 === 'undefined' || str1 === null || str2 === null || typeof str1 === 'boolean' || typeof str2 === 'boolean' || typeof str1 === 'number' || typeof str2 === 'number' || typeof str1 === 'object' || typeof str2 === 'object' || Array.isArray(str1) || Array.isArray(str2)) {
+return false;
+}
+
+return str1.length + str2.length;
+}
+
+
+function subtract(a, b) {
+if (typeof a === 'undefined' || typeof b === 'undefined' || a === null || b === null || typeof a === 'boolean' || typeof b === 'boolean' || isNaN(Number(a)) || isNaN(Number(b))) {
+return false;
+}
+
+return Number(a) - Number(b);
+}
+
+
+// function calculateChange(totalAmount, amountPaid) {
+//     let change = totalAmount - amountPaid
+//     if (typeof totalAmount === 'undefined' || typeof amountPaid === 'undefined' || typeof totalAmount === null || typeof amountPaid === null || typeof totalAmount === 'boolean' || typeof amountPaid === 'boolean')
+//         return false;
+//     else {
+//         return `$ ${change.toFixed()}`
+//     }
+//
+// }
+
+// function calculateChange(amount, price) {
+//     if ( typeof amount !== "number" || typeof price !== "number") {
+//         return false;
+//     }
+//     const change = amount - price;
+//      return '$' + change.toFixed(2);
+// }
+function calculateChange(amount, price) {
+if (typeof amount !== "number" || isNaN(amount) || typeof price !== "number" || isNaN(price)) {
+return false;
+}
+
+const change = amount - parseFloat(price);
+return '$' + change.toFixed(2);
+}
+
+</script>

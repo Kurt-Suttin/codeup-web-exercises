@@ -6,19 +6,16 @@ function initializeMap() {
         container: 'map',
         style: 'mapbox://styles/mapbox/streets-v12',
         zoom: 15,
-        center: [-98.4861, 29.4260],
-
+        center: [-98.4916, 29.4260],
     }
-
     return new mapboxgl.Map(mapOptions);
 }
+
 // console.log(initializeMap())
 const map = initializeMap()
 
 
-
 //////
-
 
 
 // Base URL for forecast API
@@ -100,7 +97,6 @@ $.ajax(URL).done((response) => {
     console.log(response);
     console.log("Response received");
     renderWeather(response.list)
-
 });
 
 function renderWeather(WeatherDataArray) {
@@ -113,14 +109,17 @@ function renderWeather(WeatherDataArray) {
         $('#insert-conditions').append(`
        
               <tr>
+              
                 <td>${WeatherDataArray[i].dt_txt}</td>
+                
                 <td> <!--gets icon from url and loops through json -->
                     <img src="https://openweathermap.org/img/wn/${WeatherDataArray[i].weather[0].icon}@2x.png" class="weather-icon">
                     ${WeatherDataArray[i].weather[0].description}
                 </td>
+              
                 <td>${WeatherDataArray[i].main.humidity}</td>
                 <td>${WeatherDataArray[i].main.temp}</td>
-            
+                
               </tr>
                 `)
     }
@@ -128,25 +127,65 @@ function renderWeather(WeatherDataArray) {
 
 //// input search function
 
-
 //
-let searchBtn = document.querySelector('.search-form');
-searchBtn.addEventListener('submit', function (e) {
-    // Grab the input from the input field (.value)
+let searchForm = document.querySelector('.search-form');
 
-    // geocode(inputValue, MAPBOX_TOKEN)
-    //     .then((data) => {
-    //         map.setCenter(data);
-    // pass the city to a function that will grab the gecode
+searchForm.addEventListener('submit', function (e) {
+    /////
 
-
-    // update marker
-    // createMarker([[-98.4916, 29.4260]])
-
+    // console log element
     e.preventDefault();
-    console.log('search btn clicked')
-    searchWeather(map)
+    // console.log("hi my GUY");
+    // console.log(searchForm);
+    // grab input value from form
+    let searchValue = document.getElementById("search").value;
+    console.log(searchValue);
+    let lat
+    let lng
+    //use geocode
+    geocode(searchValue, MAPBOX_TOKEN).then(function (results) {
+        marker.remove()
+        lat = results[0];
+        lng = results[1];
+
+        createMarker([results[0], results[1]])
+        // use value make api call for lat and lng
+        console.log(results);
+        map.setCenter(results)
+    })
+    console.log(lng);
+    console.log(lat);
+
+
+//////
+    // update marker
+
+    // console.log('search btn clicked')
+    // searchWeather(map)
 });
+
+
+//// removeAllMarkers Function
+function removeAllMarkers() {
+    // markers saved here
+    let currentMarkers = [];
+
+// tmp marker
+    let oneMarker = new mapboxgl.Marker(currentMarkerDiv)
+        .setLngLat(marker.geometry.coordinates)
+        .addTo(mapboxMap);
+
+// save tmp marker into currentMarkers
+    currentMarkers.push(oneMarker);
+
+
+// remove markers
+    if (currentMarkers !== null) {
+        for (let i = currentMarkers.length - 1; i >= 0; i--) {
+            currentMarkers[i].remove();
+        }
+    }
+}
 
 function searchWeather(map) {
     const inputValue = $('input').val();
@@ -163,17 +202,18 @@ function searchWeather(map) {
 }
 
 /// marker function
-const marker = new mapboxgl.Marker ({
-    draggable : true
+let marker = new mapboxgl.Marker({
+    draggable: true
 })
-.setLngLat([-98.4916, 29.4260])
+    .setLngLat([-98.4916, 29.4260])
     .addTo(map);
 
 
 function createMarker(arr) {
-    return new mapboxgl.Marker()
-        .setLngLat(arr)
-        .addTo(map);
+    marker = new mapboxgl.Marker()
+            .setLngLat(arr)
+            .addTo(map);
+    return marker
 }
 
 // Set an event listener
@@ -182,31 +222,13 @@ marker.on('dragend', (e) => {
     console.log(e.target._lngLat)
     const lng = e.target._lngLat.lng;
     const lat = e.target._lngLat.lat;
-    const coors ={lng,lat}
+    const coords = {lng, lat}
     const newUrl = getWeatherURL(lat, lng)
     $.ajax(newUrl).done(data => {
         renderWeather(data.list)
         // createMarker.setLngLat([lng,lat])
     })
 
-
-
-    // call function to create marker at specific lng and lat
-
-    // renderWeather(lat, lon)
 });
 
 
-
-// const buttonElem = document.querySelector('#search-btn');
-//
-// buttonElem.addEventListener("click", function (){
-//     // Grab the input info from the input field
-//     const inputValue = document.querySelector("search-input").value;
-//
-//
-//     // Either call a function that will fetch the lat and long of that city
-//
-//     // update the marker with the lat and long
-//
-// })
