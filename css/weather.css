@@ -63,3 +63,11 @@ body {
 .weather-icon {
     width: 25px;
 }
+
+/*Konami code*/
+.confetti {
+    opacity: 0;
+    width: 10em;
+    aspect-ratio: 1/1;
+
+}
