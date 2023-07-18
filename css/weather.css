@@ -1,51 +1,26 @@
-body{
+/*FONT START*/
+body {
     font-family: 'Lilita One', cursive;
 }
-.color1 {
-    color: #dedede;
+
+/*FONT END*/
+
+/*COLORS START */
+.colorWhite {
+    color: rgb(255, 255, 255);
 }
 
-.color2 {
-    color: rgb(222, 222, 222);
-}
-
-.color3 {
-    color: rgb(222, 222, 222);
-}
-
-.color4 {
-    color: rgb(222, 222, 222);
-}
-
-.color5 {
-    color: rgb(222, 222, 222);
-}
-
-.color6 {
-    color: rgb(222, 222, 222);
-}
-
-.backGroundColor1 {
+.backGroundColorBlue {
     background-color: #304e6f;
 }
 
-.backGroundColor2 {
-    background-color: rgba(52, 42, 70, 0.19);
+.backGroundColorGrey {
+    background-color: #5b6169;
 }
 
-.backGroundColor3 {
-    background-color: rgba(110, 93, 149, 0.07);
-}
+/*COLORS END */
 
-.backGroundColor4 {
-    background-color: #304e6f;
-}
-
-.backGroundColor6 {
-    background-color: rgba(254, 125, 30, 0);
-}
-
-
+/*MARGIN START*/
 .map-border {
     /*background-color: #b499e9;*/
     border: rgb(255, 255, 255) 2px solid;
@@ -55,32 +30,36 @@ body{
     padding-bottom: 5px;
 }
 
+/*MARGIN END*/
+/*WIDTH SETTING START*/
 .w-100 {
     width: 100%;
 }
-.w-80{
+
+.w-80 {
     width: 80%;
 }
 
-.weather-icon {
-    width: 25px;
-}
+/*WIDTH SETTING END*/
 
-/*.backGroundIMG {*/
-/*    background-image: url("../images/sunny-wallpaper.jpeg") ;*/
-/*    height: 100%;*/
-/*    background-position: center;*/
-/*    background-repeat: no-repeat;*/
-/*    background-size: cover;*/
-/*}*/
-.text-align-center{
+
+/*SEARCH BAR START*/
+.text-align-center {
     text-align: center;
 }
-.search-box{
+
+.search-box {
     width: 80%;
     height: 30px;
 
 }
-.search-font{
+
+.search-font {
     font-family: 'Lilita One', cursive;
+}
+
+/*SEARCH END START*/
+
+.weather-icon {
+    width: 25px;
 }
