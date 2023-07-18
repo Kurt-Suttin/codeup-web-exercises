@@ -155,13 +155,9 @@ searchForm.addEventListener('submit', function (e) {
     })
     console.log(lng);
     console.log(lat);
-
-
+    searchWeather(map)
 //////
-    // update marker
 
-    // console.log('search btn clicked')
-    // searchWeather(map)
 });
 
 
