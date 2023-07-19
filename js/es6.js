@@ -49,7 +49,8 @@ let emails = [];
 let names = [];
 
 // TODO: rewrite the following using arrow functions
-users.forEach((user) => emails.push(user.email));
+// Destructing example
+users.forEach(({email}) => emails.push(email));
 users.forEach((user) => names.push(user.name));
 
 // TODO: replace `var` with `let` in the following declaration
@@ -73,12 +74,14 @@ console.log(developers);
 let list = '<ul>';
 
 // TODO: rewrite the following loop to use a for..of loop
+
 for (const developer of developers ) {
     console.log(developers);
     list += `<li>${developer}</li>`;
 }
 list += '</ul>';
-console.log(developers);
+console.log(list);
+
 
 // developers.forEach(function (developer) {
 //
