@@ -132,7 +132,6 @@ let searchForm = document.querySelector('.search-form');
 
 searchForm.addEventListener('submit', function (e) {
     /////
-
     // console log element
     e.preventDefault();
     // console.log("hi my GUY");
