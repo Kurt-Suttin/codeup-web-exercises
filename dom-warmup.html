@@ -2,31 +2,58 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
-    <link rel="stylesheet" href="css/layout.css">
+    <title>DOM Manipulation Warmups</title>
 </head>
-<body id="body">
-<main class="container">
-    <div class="row align-center">
-        <div class="column justify-center align-center">
-            <button style="margin-top: 25% ; font-size: 40px">PUSH MEEEEE</button>
-        </div>
-    </div>
+<body>
 
-</main>
 
+<h3>The sum is: <span id="sum-output">0</span></h3>
+
+<label for="number">Number</label>
+<input id="number" type="number" name="number" min="0" max="5" value="0">
+<button id="add-btn">Add</button>
+
+<!--  Include the CDN script for jQuery below -->
+<script
+        src="http://code.jquery.com/jquery-2.2.4.min.js"
+        integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+        crossorigin="anonymous"></script>
 <script>
-    "use strict"
-    const button = document.querySelector('button')
-    const body = document.getElementById('body')
-    button.addEventListener("click", function () {
-        // ('body').css("background-color", "gold")});
-        body.style.backgroundColor = "gold"
-    });
-    button.addEventListener("dblclick", function () {
-        // ('body').css("background-color", "gold")});
-        body.style.backgroundColor = "pink"
-    });
+
+    "use strict";
+
+    // TODO:
+    //  add the needed JS so that the number selected in the number input
+    //  will be added to the number in the span
+    //  when the button is clicked
+    ///////////VANILLA JAVA SCRIPT /////////////////
+    // DECLARE VARIABLES
+    const output = document.getElementById('sum-output');
+    const buttonAddNum = document.getElementById('add-btn');
+    const numberInput = document.getElementById('number');
+
+    // FUNCTION
+    buttonAddNum.addEventListener('click', () => {
+        // output.innerText = 0;
+        const inputValue = parseInt(numberInput.value)
+        const outputResults = parseInt(output.textContent)
+        const newResult = outputResults + inputValue;
+        output.textContent = newResult;
+    })
+    /////////////JQUERY /////////////////
+
+
+    // $("#add-btn").on('click',()=>{
+    //     const input = ($('#number').val());
+    //     const output = ($('#sum-output').text())
+    //     const total = (parseInt(input) + parseInt(output))
+    //     $('#sum-output').text(total)
+    // })
+
+
+
+
 </script>
+
 </body>
 </html>
