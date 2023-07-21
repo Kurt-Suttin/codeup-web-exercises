@@ -40,52 +40,38 @@ const users = [
 ////EXERCISES/////
 
 //Create a file named map-filter-reduce.js in your js directory and copy the users data below into it.
-// Use .filter to create an array
 
+
+// Use .filter to create an array
 // of user objects where each user object has at least 3 languages in the languages array.
 
-let filteredUsers = users.filter(user => {
-    const langs = user.languages;
-    return langs.length >= 3;
-    // console.log(filteredUsers)
-    console.log(langs)
-    console.log(filteredUsers)
-});
+let filteredUsers = users.filter(user => user.languages.length >= 3);
 console.log(filteredUsers)
 
 
 // Use .map to create an array of strings where each element is a user's email address
-const mappedUsers = users.map(user => {
-    return user.email.toString();
-});
+const mappedUsers = users.map(user => user.email);
 console.log(mappedUsers);
 
 
 // Use .reduce to get the total years of experience from the list of users.
 
-const reducedUsers = users.reduce((total, user) => {
+const totalYears = users.reduce((total, user) => {
     // return total + user.yearsOfExperience
-// Once you get the total of years you can use the result to calculate the average.
+    // Once you get the total of years you can use the result to calculate the average.
     return total + user.yearsOfExperience / users.length
-
-
 }, 0);
+console.log(totalYears);
+
 // Use .reduce to get the longest email from the list of users.
-
-console.log(reducedUsers);
-
-
 const longestEmail = users.reduce((accumulation, user, index) => {
-    let emailLength = user.email.length;
-    if (emailLength > accumulation.length) {
+    if (user.email.length > accumulation.length) {
         accumulation = user.email;
     }
     return accumulation;
 }, "");
 
 console.log(longestEmail);
-
-
 
 
 // Use .reduce to get the list of user's names in a single string.
@@ -98,11 +84,27 @@ console.log(longestEmail);
 
 const concatenatedNames = users.reduce((accumulation, user, index) => {
     let userName = user.name;
-    accumulation += userName + " ";
+    accumulation += userName + ", ";
     return accumulation;
 }, "");
 
-console.log(`Your instructors are:${concatenatedNames}`);
+console.log(`Your instructors are:${concatenatedNames}.`);
+
+// const concatenatedNames = users.reduce((accumulation, user, index) => {
+//     if (index === (users.length - 2)) {
+//         accumulation += `${userName}`
+//
+//     } else if (index === (user.length - 1)) {
+//         accumulation += ` and ${userName}`
+//
+//     } else (index === (user.length))
+//     {
+//         accumulation += ` and ${userName},`
+//     }
+//     return accumulation;
+// }, "");
+
+console.log(`Your instructors are:${concatenatedNames}.`);
 
 
 
