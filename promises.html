@@ -2,10 +2,48 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Promises Exercise</title>
+    <title>Kurts page</title>
 </head>
 <body>
-
+<div class="page-wrapper">
+    <div class="container grow characters">
+        <div class="row">
+            <table id="characters">
+                <thead>
+                <tr>
+                    <th>Character</th>
+                    <th>Height</th>
+                    <th>Mass</th>
+                    <th>Hair Color</th>
+                    <th>Skin Color</th>
+                    <th>Eye Color</th>
+                    <th>Birth Year</th>
+                    <th>Gender</th>
+                    <th></th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>
+                        <div class="d-flex gap-10 align-center">
+                            <img class="character-image" src="https://via.placeholder.com/50x50">
+                            <p class="character-name">Luke Skywalker</p>
+                        </div>
+                    </td>
+                    <td>${person.height}</td>
+                    <td>${person.mass}</td>
+                    <td>${person.hair_color}</td>
+                    <td>${person.skin_color}</td>
+                    <td>${person.eye_color}</td>
+                    <td>${person.birth_year}</td>
+                    <td>${person.gender}</td>
+                    <td><button>delete</button></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
 <script src="js/keys.js"></script>
 <script src="js/promises.js"></script>
 

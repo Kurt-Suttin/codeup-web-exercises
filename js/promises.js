@@ -58,37 +58,70 @@
 // }
 
 
-// Global
-const getArrayOfPushEvents = async (userName = 'kurt-suttin') => {
-    try {
-        const userName = 'kurt-suttin'
-        const url = `https://api.github.com/users/${userName}/events`
-        const options = {
-            method: "GET",
-            headers: {
-                "Authorization": KURT_TOKEN
-            }
-        }
+// /// Global
+// const getStarWarsCharacter = (id = 1) => {
+//     // define the url argument for the fetch
+//     const url = `https://swapi.dev/api/people/${id}/`;
+//     // define the options argument for the fetch
+//     const options = {
+//         method: "GET", // changes the fetch method ("GET", "POST", "PATCH", "UPDATE" "DELETE")
+//         headers: {
+//             "Content-Type": "application/json",
+//         }
+//     };
+//     // return the fetch call
+//     return fetch(url, options)
+//         .then((response) => {
+//             console.log(response);
+//             return response.json();
+//         })
+//         .catch(error => { // catch any errors that might occur
+//             console.log(error.message);
+//         });
+// };
+//
+//
+// ////  IFEE
+//
+// (() => {
+//     getStarWarsCharacter(1).then((character => {
+//         console.l(character);
+//         // character.map(character =>{})
+//     }));
+//
+// })();
 
-        const response = await fetch(url, options);
-        const events = await response.json();
-        // console.log(person);
-        const pushEvents = events.filter((event) => {
-            return event.type === "PushEvent"
-        })
-        return pushEvents
-    } catch (error) {
-        console.log(error);
+////////////////////////////////////////////////
+////////////////////////////////////////////////
+////////////////////////////////////////////////
+const getPerson = (id = 1) => {
+    // define the url argument for the fetch
+    const url = `https://swapi.dev/api/people/${id}/`;
+    // define the options argument for the fetch
+    const options = {
+        method: "GET", // changes the fetch method ("GET", "POST", "PATCH", "UPDATE" "DELETE")
+        headers: {
+            "Content-Type": "application/json", // redundant in most cases
+            // some api's require a token passed in an "Authorization" property here, ex:
+            // "Authorization": `Bearer ${myToken}`
+        }
     }
+    return fetch(url, options) // return the entire fetch outside of the function
+        .then((response) => {
+            console.log(response);
+            return response.json();
+        })
+        .catch(error => { // catch any errors that might occur
+            console.log(error.message)
+        });
 }
 
-//// ASYNC IFEE
+(() => { // IIFE (Immediately Invoked Function Expression) - This acts as a "Main Method" i.e. the entry point to the program
+    // call the function that has the fetch
+    // but remember you're still working with a promise stream
+    // and have to chain into a .then()
+    getPerson(1).then((person) => {
+        console.log(person);
 
-
-(async () => {
-
-    const arrayOfPushEvents = await getArrayOfPushEvents('kurt-suttin')
-    console.log(arrayOfPushEvents[0].created_at)
-
+    });
 })();
-
