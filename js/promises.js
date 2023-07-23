@@ -2,9 +2,10 @@
 const tbody = document.querySelector("#tbody");
 const searchButton = document.getElementById("searchButton");
 const characterIdInput = document.getElementById("characterId");
-// const deleteButton = document.querySelector("#deleteButton")
 // const reDeleteButton = document.getElementById("reDeleteButton");
 const CharacterCardId = document.querySelector("#createCharacterCard")
+let characterIds = []
+
 
 // FUNCTION TO REMOVE CHARACTER CARD (MARK FOR DELETION)
 // const markCharacterForDeletion = (id) => {
@@ -13,13 +14,21 @@ const CharacterCardId = document.querySelector("#createCharacterCard")
 // };
 
 ////////////// FUNCTION TO CREATE CHARACTER CARD
-const createCharacterCard = (person) => {
-    const row = document.createElement("tr")
-    row.classList.add("card-row");
+const createCharacterCard = (person, characterId) => {
+    console.log(person);
+    //// if id value is included then do nothing
+    if (characterIds.includes(characterId)) {
+        return
+    }
+
+
+    const cardRow = document.createElement("tr")
+    cardRow.classList.add("card-row");
     // row.setAttribute("id", "createCharacterCard")
-    row.dataset.id = person.id;
+    cardRow.dataset.id = characterId;
     // CharacterCardId.classList.add("backGroundColorPink");
-    row.innerHTML = `
+    cardRow.innerHTML = `
+
         <td>
             <div class="d-flex gap-10 align-center">
                 <img class="character-image" src="https://via.placeholder.com/50x50">
@@ -33,8 +42,27 @@ const createCharacterCard = (person) => {
         <td class="card-text">${person.eye_color}</td>
         <td class="card-text">${person.birth_year}</td>
         <td class="card-text">${person.gender}</td>
+        <td class="card-text">
+        <button id="deleteButton-${characterId}">DELETE</button>
+        </td>
+      
     `;
-    tbody.appendChild(row);
+    tbody.appendChild(cardRow);
+
+    characterIds.push(characterId)
+    // variables
+    const deleteButton = document.querySelector(`#deleteButton-${characterId}`)
+    deleteButton.addEventListener("click", (event) => {
+        // this.style("display", "none")
+        console.log(event)
+
+        let e = event.target
+        e.parentElement.parentElement.parentElement.removeChild(cardRow);
+        console.log('DELETE THIS CARD')
+        while (e.firstChild) {
+            e.removeChild(e.firstChild);
+        }
+    });
 
 
 };
@@ -50,6 +78,7 @@ const getPerson = (id = 1) => {
     };
     return fetch(url, options)
         .then((response) => {
+            console.log(response);
             return response.json();
         })
         .catch(error => {
@@ -59,25 +88,23 @@ const getPerson = (id = 1) => {
 
 
 ////////////// EVENTS
+// deleteButton.addEventListener("click", () => {
+//
+// });
 
 searchButton.addEventListener("click", () => {
     console.log("testing");
-});
-
-searchButton.addEventListener("click", () => {
     const characterId = parseInt(characterIdInput.value);
     if (characterId && characterId >= 1) {
         getPerson(characterId).then((person) => {
-            createCharacterCard(person);
+            createCharacterCard(person, characterId);
         });
     }
 });
 // reDeleteButton.addEventListener("click", () => {
 //     this.style("display", "none")
 // });
-// deleteButton.addEventListener("click", () => {
-//     this.style("display", "none")
-// });
+
 
 // tbody.appendChild(row);
 
@@ -86,10 +113,6 @@ searchButton.addEventListener("click", () => {
     getPerson(1).then((person) => {
         console.log(person);
     });
-    createCharacterCard()
-
-
-
 
 
 })();
