@@ -1,10 +1,19 @@
+// GLOBAL VARIABLES
 const tbody = document.querySelector("#tbody");
 const searchButton = document.getElementById("searchButton");
 const characterIdInput = document.getElementById("characterId");
+const deleteButton = document.querySelector("#deleteButton")
+// FUNCTION TO REMOVE CHARACTER CARD (MARK FOR DELETION)
+const markCharacterForDeletion = (id) => {
+    const cardRow = document.querySelector(`[data-id="${id}"]`);
+    cardRow.empty()
+};
 
+// FUNCTION TO CREATE CHARACTER CARD
 const createCharacterCard = (person) => {
     const row = document.createElement("tr");
     row.classList.add("card-row");
+    row.dataset.id = person.id;
     row.innerHTML = `
         <td>
             <div class="d-flex gap-10 align-center">
@@ -19,8 +28,17 @@ const createCharacterCard = (person) => {
         <td class="card-text">${person.eye_color}</td>
         <td class="card-text">${person.birth_year}</td>
         <td class="card-text">${person.gender}</td>
-        <td><button>delete</button></td>
+        <td><button class="delete-button">delete</button></td>
     `;
+
+    // Add event listener to the delete button
+    const deleteButton = row.querySelector(".delete-button");
+    deleteButton.addEventListener("click", () => {
+        const characterId = parseInt(person.id);
+        if (characterId && characterId >= 1) {
+            markCharacterForDeletion(characterId);
+        }
+    });
 
     tbody.appendChild(row);
 };
@@ -42,6 +60,9 @@ const getPerson = (id = 1) => {
         });
 };
 
+
+
+// EVENTS
 searchButton.addEventListener("click", () => {
     const characterId = parseInt(characterIdInput.value);
     if (characterId && characterId >= 1) {
@@ -50,9 +71,6 @@ searchButton.addEventListener("click", () => {
         });
     }
 });
-
-// Display a random character card when the page loads
-const randomCharacterId = Math.floor(Math.random() * 83) + 1;
-getPerson(randomCharacterId).then((person) => {
-    createCharacterCard(person);
-});
+deleteButton.addEventListener("click",()=>{
+    markCharacterForDeletion()
+})

@@ -87,5 +87,14 @@ label {
 }
 /* background color */
 .backGroundColorBlue{
-    background-color: #007bff;
+    background-color: #2583fc;
 }
+.backGroundColorGrey{
+    background-color: #7a7a7a;
+}
+
+/* Styling for hidden rows (marked for deletion) */
+.deleted {
+    display: none;
+}
+

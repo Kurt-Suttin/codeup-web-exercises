@@ -3,16 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <title>Kurts page</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Add your CSS file here -->
+    <link rel="stylesheet" href="css/promises.css">
 </head>
-<body>
+<body class="backGroundColorGrey">
 <div class="page-wrapper">
-    <div class="container grow characters">
+    <div class="container backGroundColorBlue">
         <div class="row">
             <label for="characterId">Enter Character ID:</label>
             <input type="number" id="characterId" min="1">
             <button id="searchButton">Search</button>
         </div>
+    </div>
+    <div class="container grow characters backGroundColorBlue">
         <div class="row">
             <table id="characters">
                 <thead>
@@ -25,7 +27,7 @@
                     <th>Eye Color</th>
                     <th>Birth Year</th>
                     <th>Gender</th>
-                    <th></th>
+                    <th id="deleteButton">Delete</th>
                 </tr>
                 </thead>
                 <tbody id="tbody">
@@ -36,6 +38,5 @@
 </div>
 <script src="js/keys.js"></script>
 <script src="js/promises.js"></script>
-<script src="js/script.js"></script> <!-- Add your JavaScript file here -->
 </body>
 </html>
