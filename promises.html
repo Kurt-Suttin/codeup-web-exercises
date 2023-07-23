@@ -3,10 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <title>Kurts page</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Add your CSS file here -->
 </head>
 <body>
 <div class="page-wrapper">
     <div class="container grow characters">
+        <div class="row">
+            <label for="characterId">Enter Character ID:</label>
+            <input type="number" id="characterId" min="1">
+            <button id="searchButton">Search</button>
+        </div>
         <div class="row">
             <table id="characters">
                 <thead>
@@ -22,23 +28,7 @@
                     <th></th>
                 </tr>
                 </thead>
-                <tbody>
-                <tr>
-                    <td>
-                        <div class="d-flex gap-10 align-center">
-                            <img class="character-image" src="https://via.placeholder.com/50x50">
-                            <p class="character-name">Luke Skywalker</p>
-                        </div>
-                    </td>
-                    <td>${person.height}</td>
-                    <td>${person.mass}</td>
-                    <td>${person.hair_color}</td>
-                    <td>${person.skin_color}</td>
-                    <td>${person.eye_color}</td>
-                    <td>${person.birth_year}</td>
-                    <td>${person.gender}</td>
-                    <td><button>delete</button></td>
-                </tr>
+                <tbody id="tbody">
                 </tbody>
             </table>
         </div>
@@ -46,6 +36,6 @@
 </div>
 <script src="js/keys.js"></script>
 <script src="js/promises.js"></script>
-
+<script src="js/script.js"></script> <!-- Add your JavaScript file here -->
 </body>
 </html>

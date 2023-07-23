@@ -1,0 +1,91 @@
+/* Basic styling for the cards */
+.card-row {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.card-row:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Styling for character names */
+.character-name {
+    font-weight: bold;
+    font-size: 18px;
+    margin: 5px 0;
+}
+
+/* Styling for the card text */
+.card-text {
+    font-size: 14px;
+}
+
+/* Styling for the character image */
+.character-image {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+/* Styling for the table header */
+#characters th {
+    background-color: #f1f1f1;
+    padding: 10px;
+    text-align: left;
+    font-weight: bold;
+}
+
+/* Styling for the table rows (odd and even rows) */
+#characters tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+#characters tr:nth-child(odd) {
+    background-color: #ffffff;
+}
+
+/* Styling for the search input and button */
+.row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+label {
+    margin-right: 10px;
+}
+
+#characterId {
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+#searchButton {
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#searchButton:hover {
+    background-color: #0056b3;
+}
+
+/* Center the table */
+.container {
+    display: flex;
+    justify-content: center;
+}
+/* background color */
+.backGroundColorBlue{
+    background-color: #007bff;
+}
